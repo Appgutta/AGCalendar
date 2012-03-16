@@ -122,7 +122,7 @@ When adding this to the calendar-view you will get all event-data in a single ar
 
 ## Usage
 
-See example.
+Check out the example [app.js](example/app.js).
 
 ## Author
 
