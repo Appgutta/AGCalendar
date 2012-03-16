@@ -1,151 +1,140 @@
-Appcelerator Titanium iPhone Module Project
-===========================================
+AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom" />
+============
+## Description
+AGCalendar enables you to access the native calendar on your iPhone, iPad or iPod. EventKit and Core Data are both supported data sources. This enables you to switch between iCal and your custom calendar. Some more information below.
 
-This is a skeleton Titanium Mobile iPhone module project.  Modules can be 
-used to extend the functionality of Titanium by providing additional native
-code that is compiled into your application at build time and can expose certain
-APIs into JavaScript. 
+* **EventKit**: All events including the events in your native calendar will be shown. Events added will also be added to your native iCal.
+* **CoreData**: Uses Core Data to store your calendar-events. Only events added by your application will be shown. Added events will not be added to iCal. This also allows you to add more details to your events. 
 
-MODULE NAMING
---------------
-
-Choose a unique module id for your module.  This ID usually follows a namespace
-convention using DNS notation.  For example, com.appcelerator.module.test.  This
-ID can only be used once by all public modules in Titanium.
+> <img src="http://f.cl.ly/items/3h3B2K2O2q3p2Y2J1c2e/screen1.png" height="230" style="margin-right:20px;" />
 
 
-COMPONENTS
------------
-
-Components that are exposed by your module must follow a special naming convention.
-A component (widget, proxy, etc) must be named with the pattern:
-
-	Ti<ModuleName><ComponentName>Proxy
-
-For example, if you component was called Foo, your proxy would be named:
-
-	TiMyfirstFooProxy
-	
-For view proxies or widgets, you must create both a view proxy and a view implementation. 
-If you widget was named proxy, you would create the following files:
-
-	TiMyfirstFooProxy.h
-	TiMyfirstFooProxy.m
-	TiMyfirstFoo.h
-	TiMyfirstFoo.m
-	
-The view implementation is named the same except it does contain the suffix `Proxy`.  
-
-View implementations extend the Titanium base class `TiUIView`.  View Proxies extend the
-Titanium base class `TiUIViewProxy` or `TiUIWidgetProxy`.  
-
-For proxies that are simply native objects that can be returned to JavaScript, you can 
-simply extend `TiProxy` and no view implementation is required.
-
-
-GET STARTED
-------------
-
-1. Edit manifest with the appropriate details about your module.
-2. Edit LICENSE to add your license details.
-3. Place any assets (such as PNG files) that are required in the assets folder.
-4. Edit the titanium.xcconfig and make sure you're building for the right Titanium version.
-5. Code and build.
-
-BUILD TIME COMPILER CONFIG
+Accessing the Calendar Module
 --------------------------
 
-You can edit the file `module.xcconfig` to include any build time settings that should be
-set during application compilation that your module requires.  This file will automatically get `#include` in the main application project.  
+To access this module from JavaScript, you would do the following:
 
-For more information about this file, please see the Apple documentation at:
+>     Titanium.Calendar = Ti.Calendar = require("ag.calendar");
 
-<http://developer.apple.com/mac/library/documentation/DeveloperTools/Conceptual/XcodeBuildSystem/400-Build_Configurations/build_configs.html>
+Functions
+--------
+## `Ti.Calendar.dataSource(ids[string])`
+This will set the data source you want to use.    
+If this is not set, the calendar will default to EventKit as your data source.     
+
+Please read the  *description* above for more information.
+
+### Argument
+* [string] **dataSource**: *eventkit* or *coredata* (Default: eventkit)
+
+### Example
+>     Ti.Calendar.dataSource("coredata");
+
+## `Ti.Calendar.createView(object)`
+This will create a calendarView with controls to move back an forth between months.
+
+### Example
+>     var calendarView = Ti.Calendar.createView({});
+
+## `Ti.Calendar.addEvent(object)`
+This will add an event to your calendar object.
+### Parameters
+* **EventKit**   
+
+ * [string] **title**: Event title
+ * [string] **location**: Events location.
+ * [string] **note**: Event notes.
+ * [date] **startDate**: Events start. (Javascript date object)
+ * [date] **endDate**: Events end. (Javascript date object) 
+* **Core Data** (Including the above)      
+
+ * [string] **type**: Event type. E.g: *public* or *private*
+ * [string] **attendees**: Comma-separated list of attendees
+ * [string] **identifier**: Event identifier.
+ * [string] **organizer**: Name of the organizer
+
+### Example
+>     var endDate = new Date();
+	endDate.setHours(endDate.getHours()+3); // Set event to last 3 hours.
+
+>     calendar.addEvent({
+        title: "Attend the 2011 WWDC conference",   
+        startDate: new Date(),  
+        endDate: endDate,   
+        location: "San Francisco",   
+        identifier: Ti.Calendar.identifier,
+        type:"public",
+        attendees: "Steve, Phil",
+        organizer: "Chris Magnussen",
+        note: "Be mad about not getting the iPhone 5"  
+    });
+
+## `calendarView.selectTodaysDate([void])`
+Select todays date in the calendarView.     
+Nothing more, nothing less..
+
+### Example
+
+>     var calendarView = Ti.Calendar.createView();
+>     var todayButton = Ti.UI.createButton({title: "Today"});
+
+>     todayButton.addEventListener("click", function() {
+        Ti.Calendar.selectTodaysDate();
+    });
+
+>     window.setLeftNavButton(todayButton);
+
+Properties
+--------
+## `Ti.Calendar.identifier (read-only)`
+
+This can be used for the ***identifier***-parameter in the *createView()*-instance. 
+
+### Returns
+* [string] MD5 sum of globallyUniqueString
+
+Events
+-----
+## `event:clicked`
+When adding this to the calendar-view you will get all event-data in a single array whenever a user clicks the event-table.
+
+### Returns
+* [string] **title**
+* [string] **type** (*)
+* [string] **location**
+* [string] **attendees** (*)
+* [string] **description** (*)
+* [string] **identifier** (**)
+* [string] **organizer** (*)
+* [date] **startDate** (Standard dateTime format)
+* [date] **endDate** (Standard dateTime format)
+
+(\*) Only available when using Core Data as the data source.   
+(\**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.
+
+### Example
+>     calendarView.addEventListener("event:clicked", function(e) {
+        var event = e.event;
+        var start_date = new Date(event.startDate);
+        alert(event.title+" will start "+start_date);
+    });
 
 
-DOCUMENTATION FOR YOUR MODULE
------------------------------
+## Usage
 
-You should provide at least minimal documentation for your module in `documentation` folder using the Markdown syntax.
+See example.
 
-For more information on the Markdown syntax, refer to this documentation at:
+## Author
 
-<http://daringfireball.net/projects/markdown/>
+Chris Magnussen for Appgutta, DA.
 
+ * [Twitter][]
+ * [Appgutta.no][]
 
-TEST HARNESS EXAMPLE FOR YOUR MODULE
-------------------------------------
-
-The `example` directory contains a skeleton application test harness that can be 
-used for testing and providing an example of usage to the users of your module.
-
-
-INSTALL YOUR MODULE
---------------------
-
-1. Run `build.py` which creates your distribution
-2. cd to `/Library/Application Support/Titanium`
-3. copy this zip file into the folder of your Titanium SDK
-
-REGISTER YOUR MODULE
----------------------
-
-Register your module with your application by editing `tiapp.xml` and adding your module.
-Example:
-
-<modules>
-	<module version="0.1">ag.calendar</module>
-</modules>
-
-When you run your project, the compiler will know automatically compile in your module
-dependencies and copy appropriate image assets into the application.
-
-USING YOUR MODULE IN CODE
--------------------------
-
-To use your module in code, you will need to require it. 
-
-For example,
-
-	var my_module = require('ag.calendar');
-	my_module.foo();
-
-WRITING PURE JS NATIVE MODULES
-------------------------------
-
-You can write a pure JavaScript "natively compiled" module.  This is nice if you
-want to distribute a JS module pre-compiled.
-
-To create a module, create a file named ag.calendar.js under the assets folder.
-This file must be in the Common JS format.  For example:
-
-	exports.echo = function(s)
-	{
-		return s;
-	};
-	
-Any functions and properties that are exported will be made available as part of your
-module.  All other code inside your JS will be private to your module.
-
-For pure JS module, you don't need to modify any of the Objective-C module code. You
-can leave it as-is and build.
-
-TESTING YOUR MODULE
--------------------
-
-Run the `titanium.py` script to test your module or test from within XCode.
-To test with the script, execute:
-
-	titanium run --dir=YOURMODULEDIR
-	
-
-This will execute the app.js in the example folder as a Titanium application.
+License
+------
+Copyright(c) 2011 by Appgutta, DA. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
 
 
-DISTRIBUTING YOUR MODULE
--------------------------
-
-Currently, you will need to manually distribution your module distribution zip file directly. However, in the near future, we will make module distribution and sharing built-in to Titanium Developer and in the Titanium Marketplace!
-
-
-Cheers!
+[Twitter]: http://twitter.com/crmag
+[Appgutta.no]: http://www.appgutta.no
