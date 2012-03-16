@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* AgCalendar_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* AgCalendar_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		CE788D1F143D03CE005F61EF /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = CE788D1D143D03CE005F61EF /* NSString+MD5.h */; };
+		CE788D20143D03CE005F61EF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE788D1E143D03CE005F61EF /* NSString+MD5.m */; };
+		CEEF66BF143CBD9300FD8155 /* Kal.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66A9143CBD9300FD8155 /* Kal.h */; };
+		CEEF66C0143CBD9300FD8155 /* KalDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66AA143CBD9300FD8155 /* KalDataSource.h */; };
+		CEEF66C1143CBD9300FD8155 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66AB143CBD9300FD8155 /* KalDataSource.m */; };
+		CEEF66C2143CBD9300FD8155 /* KalDate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66AC143CBD9300FD8155 /* KalDate.h */; };
+		CEEF66C3143CBD9300FD8155 /* KalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66AD143CBD9300FD8155 /* KalDate.m */; };
+		CEEF66C4143CBD9300FD8155 /* KalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66AE143CBD9300FD8155 /* KalGridView.h */; };
+		CEEF66C5143CBD9300FD8155 /* KalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66AF143CBD9300FD8155 /* KalGridView.m */; };
+		CEEF66C6143CBD9300FD8155 /* KalLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B0143CBD9300FD8155 /* KalLogic.h */; };
+		CEEF66C7143CBD9300FD8155 /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66B1143CBD9300FD8155 /* KalLogic.m */; };
+		CEEF66C8143CBD9300FD8155 /* KalMonthView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B2143CBD9300FD8155 /* KalMonthView.h */; };
+		CEEF66C9143CBD9300FD8155 /* KalMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66B3143CBD9300FD8155 /* KalMonthView.m */; };
+		CEEF66CA143CBD9300FD8155 /* KalPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B4143CBD9300FD8155 /* KalPrivate.h */; };
+		CEEF66CB143CBD9300FD8155 /* KalTileView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B5143CBD9300FD8155 /* KalTileView.h */; };
+		CEEF66CC143CBD9300FD8155 /* KalTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66B6143CBD9300FD8155 /* KalTileView.m */; };
+		CEEF66CD143CBD9300FD8155 /* KalView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B7143CBD9300FD8155 /* KalView.h */; };
+		CEEF66CE143CBD9300FD8155 /* KalView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66B8143CBD9300FD8155 /* KalView.m */; };
+		CEEF66CF143CBD9300FD8155 /* KalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66B9143CBD9300FD8155 /* KalViewController.h */; };
+		CEEF66D0143CBD9300FD8155 /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66BA143CBD9300FD8155 /* KalViewController.m */; };
+		CEEF66D1143CBD9300FD8155 /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66BB143CBD9300FD8155 /* NSDateAdditions.h */; };
+		CEEF66D2143CBD9300FD8155 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66BC143CBD9300FD8155 /* NSDateAdditions.m */; };
+		CEEF66D3143CBD9300FD8155 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66BD143CBD9300FD8155 /* UIViewAdditions.h */; };
+		CEEF66D4143CBD9300FD8155 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66BE143CBD9300FD8155 /* UIViewAdditions.m */; };
+		CEEF66EB143CBDB000FD8155 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66D6143CBDAF00FD8155 /* Event.h */; };
+		CEEF66EC143CBDB000FD8155 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66D7143CBDAF00FD8155 /* Event.m */; };
+		CEEF66ED143CBDB000FD8155 /* EventKitDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66D8143CBDAF00FD8155 /* EventKitDataSource.h */; };
+		CEEF66EE143CBDB000FD8155 /* EventKitDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66D9143CBDAF00FD8155 /* EventKitDataSource.m */; };
+		CEEF66EF143CBDB000FD8155 /* SQLDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66DA143CBDAF00FD8155 /* SQLDataSource.h */; };
+		CEEF66F0143CBDB000FD8155 /* SQLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66DB143CBDAF00FD8155 /* SQLDataSource.m */; };
+		CEEF66F1143CBDB000FD8155 /* Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66DC143CBDAF00FD8155 /* Globals.h */; };
+		CEEF66F2143CBDB000FD8155 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66DD143CBDAF00FD8155 /* Globals.m */; };
+		CEEF66F3143CBDB000FD8155 /* AgCalendarModule.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66DF143CBDAF00FD8155 /* AgCalendarModule.h */; };
+		CEEF66F4143CBDB000FD8155 /* AgCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E0143CBDAF00FD8155 /* AgCalendarModule.m */; };
+		CEEF66F5143CBDB000FD8155 /* AgCalendarModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E1143CBDAF00FD8155 /* AgCalendarModuleAssets.h */; };
+		CEEF66F6143CBDB000FD8155 /* AgCalendarModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E2143CBDAF00FD8155 /* AgCalendarModuleAssets.m */; };
+		CEEF66F7143CBDB000FD8155 /* AgCalendarEventProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */; };
+		CEEF66F8143CBDB000FD8155 /* AgCalendarEventProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */; };
+		CEEF66F9143CBDB000FD8155 /* AgCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E7143CBDB000FD8155 /* AgCalendarView.h */; };
+		CEEF66FA143CBDB000FD8155 /* AgCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E8143CBDB000FD8155 /* AgCalendarView.m */; };
+		CEEF66FB143CBDB000FD8155 /* AgCalendarViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E9143CBDB000FD8155 /* AgCalendarViewProxy.h */; };
+		CEEF66FC143CBDB000FD8155 /* AgCalendarViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66EA143CBDB000FD8155 /* AgCalendarViewProxy.m */; };
+		CEEF6717143CBE1A00FD8155 /* kal_grid_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF66FF143CBDE200FD8155 /* kal_grid_background.png */; };
+		CEEF6718143CBE1A00FD8155 /* kal_grid_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6700143CBDE200FD8155 /* kal_grid_shadow.png */; };
+		CEEF6719143CBE1A00FD8155 /* kal_header_text_fill.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6701143CBDE200FD8155 /* kal_header_text_fill.png */; };
+		CEEF671A143CBE1A00FD8155 /* kal_left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6702143CBDE200FD8155 /* kal_left_arrow.png */; };
+		CEEF671B143CBE1A00FD8155 /* kal_left_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6703143CBDE200FD8155 /* kal_left_arrow@2x.png */; };
+		CEEF671C143CBE1A00FD8155 /* kal_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6704143CBDE200FD8155 /* kal_marker.png */; };
+		CEEF671D143CBE1A00FD8155 /* kal_marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6705143CBDE200FD8155 /* kal_marker@2x.png */; };
+		CEEF671E143CBE1A00FD8155 /* kal_marker_dim.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6706143CBDE200FD8155 /* kal_marker_dim.png */; };
+		CEEF671F143CBE1A00FD8155 /* kal_marker_dim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6707143CBDE200FD8155 /* kal_marker_dim@2x.png */; };
+		CEEF6720143CBE1A00FD8155 /* kal_marker_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6708143CBDE200FD8155 /* kal_marker_selected.png */; };
+		CEEF6721143CBE1A00FD8155 /* kal_marker_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6709143CBDE200FD8155 /* kal_marker_selected@2x.png */; };
+		CEEF6722143CBE1A00FD8155 /* kal_marker_today.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670A143CBDE200FD8155 /* kal_marker_today.png */; };
+		CEEF6723143CBE1A00FD8155 /* kal_marker_today@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670B143CBDE200FD8155 /* kal_marker_today@2x.png */; };
+		CEEF6724143CBE1A00FD8155 /* kal_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670C143CBDE200FD8155 /* kal_right_arrow.png */; };
+		CEEF6725143CBE1A00FD8155 /* kal_right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670D143CBDE200FD8155 /* kal_right_arrow@2x.png */; };
+		CEEF6726143CBE1A00FD8155 /* kal_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670E143CBDE200FD8155 /* kal_tile.png */; };
+		CEEF6727143CBE1A00FD8155 /* kal_tile_dim_text_fill.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF670F143CBDE200FD8155 /* kal_tile_dim_text_fill.png */; };
+		CEEF6728143CBE1A00FD8155 /* kal_tile_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6710143CBDE200FD8155 /* kal_tile_selected.png */; };
+		CEEF6729143CBE1A00FD8155 /* kal_tile_text_fill.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6711143CBDE200FD8155 /* kal_tile_text_fill.png */; };
+		CEEF672A143CBE1A00FD8155 /* kal_tile_today.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6712143CBDE200FD8155 /* kal_tile_today.png */; };
+		CEEF672B143CBE1A00FD8155 /* kal_tile_today_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6713143CBDE200FD8155 /* kal_tile_today_selected.png */; };
+		CEEF672D143CBE2A00FD8155 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */; };
+		CEEF672F143CBE3400FD8155 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = agcalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* AgCalendar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendar_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE788D1D143D03CE005F61EF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		CE788D1E143D03CE005F61EF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		CEEF66A9143CBD9300FD8155 /* Kal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kal.h; sourceTree = "<group>"; };
+		CEEF66AA143CBD9300FD8155 /* KalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDataSource.h; sourceTree = "<group>"; };
+		CEEF66AB143CBD9300FD8155 /* KalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDataSource.m; sourceTree = "<group>"; };
+		CEEF66AC143CBD9300FD8155 /* KalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDate.h; sourceTree = "<group>"; };
+		CEEF66AD143CBD9300FD8155 /* KalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDate.m; sourceTree = "<group>"; };
+		CEEF66AE143CBD9300FD8155 /* KalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalGridView.h; sourceTree = "<group>"; };
+		CEEF66AF143CBD9300FD8155 /* KalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalGridView.m; sourceTree = "<group>"; };
+		CEEF66B0143CBD9300FD8155 /* KalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalLogic.h; sourceTree = "<group>"; };
+		CEEF66B1143CBD9300FD8155 /* KalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalLogic.m; sourceTree = "<group>"; };
+		CEEF66B2143CBD9300FD8155 /* KalMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalMonthView.h; sourceTree = "<group>"; };
+		CEEF66B3143CBD9300FD8155 /* KalMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalMonthView.m; sourceTree = "<group>"; };
+		CEEF66B4143CBD9300FD8155 /* KalPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalPrivate.h; sourceTree = "<group>"; };
+		CEEF66B5143CBD9300FD8155 /* KalTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalTileView.h; sourceTree = "<group>"; };
+		CEEF66B6143CBD9300FD8155 /* KalTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalTileView.m; sourceTree = "<group>"; };
+		CEEF66B7143CBD9300FD8155 /* KalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalView.h; sourceTree = "<group>"; };
+		CEEF66B8143CBD9300FD8155 /* KalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalView.m; sourceTree = "<group>"; };
+		CEEF66B9143CBD9300FD8155 /* KalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalViewController.h; sourceTree = "<group>"; };
+		CEEF66BA143CBD9300FD8155 /* KalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalViewController.m; sourceTree = "<group>"; };
+		CEEF66BB143CBD9300FD8155 /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
+		CEEF66BC143CBD9300FD8155 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		CEEF66BD143CBD9300FD8155 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		CEEF66BE143CBD9300FD8155 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		CEEF66D6143CBDAF00FD8155 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		CEEF66D7143CBDAF00FD8155 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		CEEF66D8143CBDAF00FD8155 /* EventKitDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventKitDataSource.h; sourceTree = "<group>"; };
+		CEEF66D9143CBDAF00FD8155 /* EventKitDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventKitDataSource.m; sourceTree = "<group>"; };
+		CEEF66DA143CBDAF00FD8155 /* SQLDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLDataSource.h; sourceTree = "<group>"; };
+		CEEF66DB143CBDAF00FD8155 /* SQLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLDataSource.m; sourceTree = "<group>"; };
+		CEEF66DC143CBDAF00FD8155 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globals.h; path = Classes/Globals.h; sourceTree = "<group>"; };
+		CEEF66DD143CBDAF00FD8155 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Globals.m; path = Classes/Globals.m; sourceTree = "<group>"; };
+		CEEF66DF143CBDAF00FD8155 /* AgCalendarModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarModule.h; sourceTree = "<group>"; };
+		CEEF66E0143CBDAF00FD8155 /* AgCalendarModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarModule.m; sourceTree = "<group>"; };
+		CEEF66E1143CBDAF00FD8155 /* AgCalendarModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarModuleAssets.h; sourceTree = "<group>"; };
+		CEEF66E2143CBDAF00FD8155 /* AgCalendarModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarModuleAssets.m; sourceTree = "<group>"; };
+		CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarEventProxy.h; sourceTree = "<group>"; };
+		CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarEventProxy.m; sourceTree = "<group>"; };
+		CEEF66E7143CBDB000FD8155 /* AgCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarView.h; sourceTree = "<group>"; };
+		CEEF66E8143CBDB000FD8155 /* AgCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarView.m; sourceTree = "<group>"; };
+		CEEF66E9143CBDB000FD8155 /* AgCalendarViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarViewProxy.h; sourceTree = "<group>"; };
+		CEEF66EA143CBDB000FD8155 /* AgCalendarViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarViewProxy.m; sourceTree = "<group>"; };
+		CEEF66FF143CBDE200FD8155 /* kal_grid_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_grid_background.png; sourceTree = "<group>"; };
+		CEEF6700143CBDE200FD8155 /* kal_grid_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_grid_shadow.png; sourceTree = "<group>"; };
+		CEEF6701143CBDE200FD8155 /* kal_header_text_fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_header_text_fill.png; sourceTree = "<group>"; };
+		CEEF6702143CBDE200FD8155 /* kal_left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_left_arrow.png; sourceTree = "<group>"; };
+		CEEF6703143CBDE200FD8155 /* kal_left_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_left_arrow@2x.png"; sourceTree = "<group>"; };
+		CEEF6704143CBDE200FD8155 /* kal_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_marker.png; sourceTree = "<group>"; };
+		CEEF6705143CBDE200FD8155 /* kal_marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_marker@2x.png"; sourceTree = "<group>"; };
+		CEEF6706143CBDE200FD8155 /* kal_marker_dim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_marker_dim.png; sourceTree = "<group>"; };
+		CEEF6707143CBDE200FD8155 /* kal_marker_dim@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_marker_dim@2x.png"; sourceTree = "<group>"; };
+		CEEF6708143CBDE200FD8155 /* kal_marker_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_marker_selected.png; sourceTree = "<group>"; };
+		CEEF6709143CBDE200FD8155 /* kal_marker_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_marker_selected@2x.png"; sourceTree = "<group>"; };
+		CEEF670A143CBDE200FD8155 /* kal_marker_today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_marker_today.png; sourceTree = "<group>"; };
+		CEEF670B143CBDE200FD8155 /* kal_marker_today@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_marker_today@2x.png"; sourceTree = "<group>"; };
+		CEEF670C143CBDE200FD8155 /* kal_right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_right_arrow.png; sourceTree = "<group>"; };
+		CEEF670D143CBDE200FD8155 /* kal_right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kal_right_arrow@2x.png"; sourceTree = "<group>"; };
+		CEEF670E143CBDE200FD8155 /* kal_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile.png; sourceTree = "<group>"; };
+		CEEF670F143CBDE200FD8155 /* kal_tile_dim_text_fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_dim_text_fill.png; sourceTree = "<group>"; };
+		CEEF6710143CBDE200FD8155 /* kal_tile_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_selected.png; sourceTree = "<group>"; };
+		CEEF6711143CBDE200FD8155 /* kal_tile_text_fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_text_fill.png; sourceTree = "<group>"; };
+		CEEF6712143CBDE200FD8155 /* kal_tile_today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_today.png; sourceTree = "<group>"; };
+		CEEF6713143CBDE200FD8155 /* kal_tile_today_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_today_selected.png; sourceTree = "<group>"; };
+		CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libAgCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAgCalendar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF672F143CBE3400FD8155 /* libsqlite3.dylib in Frameworks */,
+				CEEF672D143CBE2A00FD8155 /* EventKitUI.framework in Frameworks */,
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libAgCalendar.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* agcalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66FD143CBDE200FD8155 /* assets */,
+				CEEF66A8143CBD9300FD8155 /* Libraries */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = agcalendar;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */,
+				CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66DC143CBDAF00FD8155 /* Globals.h */,
+				CEEF66DD143CBDAF00FD8155 /* Globals.m */,
+				CEEF66D5143CBDAF00FD8155 /* Datasource */,
+				CEEF66DE143CBDAF00FD8155 /* Module */,
+				CEEF66E3143CBDAF00FD8155 /* Proxy */,
+				CEEF66E6143CBDB000FD8155 /* View */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* AgCalendar_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		CEEF66A8143CBD9300FD8155 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66A9143CBD9300FD8155 /* Kal.h */,
+				CEEF66AA143CBD9300FD8155 /* KalDataSource.h */,
+				CEEF66AB143CBD9300FD8155 /* KalDataSource.m */,
+				CEEF66AC143CBD9300FD8155 /* KalDate.h */,
+				CEEF66AD143CBD9300FD8155 /* KalDate.m */,
+				CEEF66AE143CBD9300FD8155 /* KalGridView.h */,
+				CEEF66AF143CBD9300FD8155 /* KalGridView.m */,
+				CEEF66B0143CBD9300FD8155 /* KalLogic.h */,
+				CEEF66B1143CBD9300FD8155 /* KalLogic.m */,
+				CEEF66B2143CBD9300FD8155 /* KalMonthView.h */,
+				CEEF66B3143CBD9300FD8155 /* KalMonthView.m */,
+				CEEF66B4143CBD9300FD8155 /* KalPrivate.h */,
+				CEEF66B5143CBD9300FD8155 /* KalTileView.h */,
+				CEEF66B6143CBD9300FD8155 /* KalTileView.m */,
+				CEEF66B7143CBD9300FD8155 /* KalView.h */,
+				CEEF66B8143CBD9300FD8155 /* KalView.m */,
+				CEEF66B9143CBD9300FD8155 /* KalViewController.h */,
+				CEEF66BA143CBD9300FD8155 /* KalViewController.m */,
+				CEEF66BB143CBD9300FD8155 /* NSDateAdditions.h */,
+				CEEF66BC143CBD9300FD8155 /* NSDateAdditions.m */,
+				CEEF66BD143CBD9300FD8155 /* UIViewAdditions.h */,
+				CEEF66BE143CBD9300FD8155 /* UIViewAdditions.m */,
+				CE788D1D143D03CE005F61EF /* NSString+MD5.h */,
+				CE788D1E143D03CE005F61EF /* NSString+MD5.m */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CEEF66D5143CBDAF00FD8155 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66D6143CBDAF00FD8155 /* Event.h */,
+				CEEF66D7143CBDAF00FD8155 /* Event.m */,
+				CEEF66D8143CBDAF00FD8155 /* EventKitDataSource.h */,
+				CEEF66D9143CBDAF00FD8155 /* EventKitDataSource.m */,
+				CEEF66DA143CBDAF00FD8155 /* SQLDataSource.h */,
+				CEEF66DB143CBDAF00FD8155 /* SQLDataSource.m */,
+			);
+			name = Datasource;
+			path = Classes/Datasource;
+			sourceTree = "<group>";
+		};
+		CEEF66DE143CBDAF00FD8155 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66DF143CBDAF00FD8155 /* AgCalendarModule.h */,
+				CEEF66E0143CBDAF00FD8155 /* AgCalendarModule.m */,
+				CEEF66E1143CBDAF00FD8155 /* AgCalendarModuleAssets.h */,
+				CEEF66E2143CBDAF00FD8155 /* AgCalendarModuleAssets.m */,
+			);
+			name = Module;
+			path = Classes/Module;
+			sourceTree = "<group>";
+		};
+		CEEF66E3143CBDAF00FD8155 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */,
+				CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */,
+			);
+			name = Proxy;
+			path = Classes/Proxy;
+			sourceTree = "<group>";
+		};
+		CEEF66E6143CBDB000FD8155 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66E7143CBDB000FD8155 /* AgCalendarView.h */,
+				CEEF66E8143CBDB000FD8155 /* AgCalendarView.m */,
+				CEEF66E9143CBDB000FD8155 /* AgCalendarViewProxy.h */,
+				CEEF66EA143CBDB000FD8155 /* AgCalendarViewProxy.m */,
+			);
+			name = View;
+			path = Classes/View;
+			sourceTree = "<group>";
+		};
+		CEEF66FD143CBDE200FD8155 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF66FF143CBDE200FD8155 /* kal_grid_background.png */,
+				CEEF6700143CBDE200FD8155 /* kal_grid_shadow.png */,
+				CEEF6701143CBDE200FD8155 /* kal_header_text_fill.png */,
+				CEEF6702143CBDE200FD8155 /* kal_left_arrow.png */,
+				CEEF6703143CBDE200FD8155 /* kal_left_arrow@2x.png */,
+				CEEF6704143CBDE200FD8155 /* kal_marker.png */,
+				CEEF6705143CBDE200FD8155 /* kal_marker@2x.png */,
+				CEEF6706143CBDE200FD8155 /* kal_marker_dim.png */,
+				CEEF6707143CBDE200FD8155 /* kal_marker_dim@2x.png */,
+				CEEF6708143CBDE200FD8155 /* kal_marker_selected.png */,
+				CEEF6709143CBDE200FD8155 /* kal_marker_selected@2x.png */,
+				CEEF670A143CBDE200FD8155 /* kal_marker_today.png */,
+				CEEF670B143CBDE200FD8155 /* kal_marker_today@2x.png */,
+				CEEF670C143CBDE200FD8155 /* kal_right_arrow.png */,
+				CEEF670D143CBDE200FD8155 /* kal_right_arrow@2x.png */,
+				CEEF670E143CBDE200FD8155 /* kal_tile.png */,
+				CEEF670F143CBDE200FD8155 /* kal_tile_dim_text_fill.png */,
+				CEEF6710143CBDE200FD8155 /* kal_tile_selected.png */,
+				CEEF6711143CBDE200FD8155 /* kal_tile_text_fill.png */,
+				CEEF6712143CBDE200FD8155 /* kal_tile_today.png */,
+				CEEF6713143CBDE200FD8155 /* kal_tile_today_selected.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* AgCalendar_Prefix.pch in Headers */,
+				CEEF66BF143CBD9300FD8155 /* Kal.h in Headers */,
+				CEEF66C0143CBD9300FD8155 /* KalDataSource.h in Headers */,
+				CEEF66C2143CBD9300FD8155 /* KalDate.h in Headers */,
+				CEEF66C4143CBD9300FD8155 /* KalGridView.h in Headers */,
+				CEEF66C6143CBD9300FD8155 /* KalLogic.h in Headers */,
+				CEEF66C8143CBD9300FD8155 /* KalMonthView.h in Headers */,
+				CEEF66CA143CBD9300FD8155 /* KalPrivate.h in Headers */,
+				CEEF66CB143CBD9300FD8155 /* KalTileView.h in Headers */,
+				CEEF66CD143CBD9300FD8155 /* KalView.h in Headers */,
+				CEEF66CF143CBD9300FD8155 /* KalViewController.h in Headers */,
+				CEEF66D1143CBD9300FD8155 /* NSDateAdditions.h in Headers */,
+				CEEF66D3143CBD9300FD8155 /* UIViewAdditions.h in Headers */,
+				CEEF66EB143CBDB000FD8155 /* Event.h in Headers */,
+				CEEF66ED143CBDB000FD8155 /* EventKitDataSource.h in Headers */,
+				CEEF66EF143CBDB000FD8155 /* SQLDataSource.h in Headers */,
+				CEEF66F1143CBDB000FD8155 /* Globals.h in Headers */,
+				CEEF66F3143CBDB000FD8155 /* AgCalendarModule.h in Headers */,
+				CEEF66F5143CBDB000FD8155 /* AgCalendarModuleAssets.h in Headers */,
+				CEEF66F7143CBDB000FD8155 /* AgCalendarEventProxy.h in Headers */,
+				CEEF66F9143CBDB000FD8155 /* AgCalendarView.h in Headers */,
+				CEEF66FB143CBDB000FD8155 /* AgCalendarViewProxy.h in Headers */,
+				CE788D1F143D03CE005F61EF /* NSString+MD5.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* agcalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "agcalendar" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+				CEEF6715143CBE0E00FD8155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = agcalendar;
+			productName = agcalendar;
+			productReference = D2AAC07E0554694100DB518D /* libAgCalendar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "agcalendar" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* agcalendar */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* agcalendar */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEEF6715143CBE0E00FD8155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF6717143CBE1A00FD8155 /* kal_grid_background.png in Resources */,
+				CEEF6718143CBE1A00FD8155 /* kal_grid_shadow.png in Resources */,
+				CEEF6719143CBE1A00FD8155 /* kal_header_text_fill.png in Resources */,
+				CEEF671A143CBE1A00FD8155 /* kal_left_arrow.png in Resources */,
+				CEEF671B143CBE1A00FD8155 /* kal_left_arrow@2x.png in Resources */,
+				CEEF671C143CBE1A00FD8155 /* kal_marker.png in Resources */,
+				CEEF671D143CBE1A00FD8155 /* kal_marker@2x.png in Resources */,
+				CEEF671E143CBE1A00FD8155 /* kal_marker_dim.png in Resources */,
+				CEEF671F143CBE1A00FD8155 /* kal_marker_dim@2x.png in Resources */,
+				CEEF6720143CBE1A00FD8155 /* kal_marker_selected.png in Resources */,
+				CEEF6721143CBE1A00FD8155 /* kal_marker_selected@2x.png in Resources */,
+				CEEF6722143CBE1A00FD8155 /* kal_marker_today.png in Resources */,
+				CEEF6723143CBE1A00FD8155 /* kal_marker_today@2x.png in Resources */,
+				CEEF6724143CBE1A00FD8155 /* kal_right_arrow.png in Resources */,
+				CEEF6725143CBE1A00FD8155 /* kal_right_arrow@2x.png in Resources */,
+				CEEF6726143CBE1A00FD8155 /* kal_tile.png in Resources */,
+				CEEF6727143CBE1A00FD8155 /* kal_tile_dim_text_fill.png in Resources */,
+				CEEF6728143CBE1A00FD8155 /* kal_tile_selected.png in Resources */,
+				CEEF6729143CBE1A00FD8155 /* kal_tile_text_fill.png in Resources */,
+				CEEF672A143CBE1A00FD8155 /* kal_tile_today.png in Resources */,
+				CEEF672B143CBE1A00FD8155 /* kal_tile_today_selected.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF66C1143CBD9300FD8155 /* KalDataSource.m in Sources */,
+				CEEF66C3143CBD9300FD8155 /* KalDate.m in Sources */,
+				CEEF66C5143CBD9300FD8155 /* KalGridView.m in Sources */,
+				CEEF66C7143CBD9300FD8155 /* KalLogic.m in Sources */,
+				CEEF66C9143CBD9300FD8155 /* KalMonthView.m in Sources */,
+				CEEF66CC143CBD9300FD8155 /* KalTileView.m in Sources */,
+				CEEF66CE143CBD9300FD8155 /* KalView.m in Sources */,
+				CEEF66D0143CBD9300FD8155 /* KalViewController.m in Sources */,
+				CEEF66D2143CBD9300FD8155 /* NSDateAdditions.m in Sources */,
+				CEEF66D4143CBD9300FD8155 /* UIViewAdditions.m in Sources */,
+				CEEF66EC143CBDB000FD8155 /* Event.m in Sources */,
+				CEEF66EE143CBDB000FD8155 /* EventKitDataSource.m in Sources */,
+				CEEF66F0143CBDB000FD8155 /* SQLDataSource.m in Sources */,
+				CEEF66F2143CBDB000FD8155 /* Globals.m in Sources */,
+				CEEF66F4143CBDB000FD8155 /* AgCalendarModule.m in Sources */,
+				CEEF66F6143CBDB000FD8155 /* AgCalendarModuleAssets.m in Sources */,
+				CEEF66F8143CBDB000FD8155 /* AgCalendarEventProxy.m in Sources */,
+				CEEF66FA143CBDB000FD8155 /* AgCalendarView.m in Sources */,
+				CEEF66FC143CBDB000FD8155 /* AgCalendarViewProxy.m in Sources */,
+				CE788D20143D03CE005F61EF /* NSString+MD5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* agcalendar */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/AgCalendar.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AgCalendar_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = AgCalendar;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "ipados ipadsimulator iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/AgCalendar.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AgCalendar_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = AgCalendar;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "agcalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "agcalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

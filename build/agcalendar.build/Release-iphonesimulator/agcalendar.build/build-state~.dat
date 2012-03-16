@@ -1,0 +1,1086 @@
+Tagcalendar
+v3
+r1
+cCheck dependencies
+cProcessPCH /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch AgCalendar_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLibtool "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/libAgCalendar.a" normal i386
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004E46DAB30000000000000110
+t1313266355
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D93DEBB0000000000000AB3
+t1301536443
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
+c000000004D93DEF900000000000004FE
+t1301536505
+s1278
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.h
+c000000004D93ECB600000000000001B3
+t1301540022
+s435
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/EventKitUI.framework/EventKitUI
+c000000004D99FAFD00000000000E8AF0
+t1301936893
+s953072
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D93DFEA000000000029DA70
+t1301536746
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D93DFDD0000000000001466
+t1301536733
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFormatter.h
+c000000004D93DFDE00000000000004D9
+t1301536734
+s1241
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D93E12E00000000000000C4
+t1301537070
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D93ECBE0000000000000AA1
+t1301540030
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/AvailabilityMacros.h
+c000000004D4F7A2B0000000000007A5E
+t1297054251
+s31326
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/dispatch/dispatch.h
+c000000004D93DB5B00000000000005E9
+t1301535579
+s1513
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/mach/mach_time.h
+c000000004D93E0AE0000000000000746
+t1301536942
+s1862
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/math.h
+c000000004A5C14A000000000000004F1
+t1247548576
+s1265
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/pthread.h
+c000000004D4F6E9A0000000000003BF6
+t1297051290
+s15350
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sqlite3.h
+c000000004D93DBE70000000000045296
+t1301535719
+s283286
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/time.h
+c000000004D4F6E9A000000000000178E
+t1297051290
+s6030
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin11/4.2.1/include/stdbool.h
+c000000004A1198340000000000000644
+t1242667060
+s1604
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin11/4.2.1/include/stddef.h
+c000000004A1198340000000000003197
+t1242667060
+s12695
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libsqlite3.dylib
+c000000004D93DBFD0000000000099500
+t1301535741
+s627968
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/Bridge.h
+c000000004DFFC85C0000000000000268
+t1308608604
+s616
+i"TiProxy.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/KrollCallback.h
+c000000004DFFC85C00000000000008A2
+t1308608604
+s2210
+i<Foundation/Foundation.h>
+i"TiCore.h"
+i"KrollContext.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/KrollContext.h
+c000000004E0988BE00000000000013C3
+t1309247678
+s5059
+i<Foundation/Foundation.h>
+i"TiCore.h"
+i"TiBase.h"
+i"TiContextRefPrivate.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/KrollObject.h
+c000000004DFFC85C0000000000000D1B
+t1308608604
+s3355
+i<Foundation/Foundation.h>
+i"TiCore.h"
+i"TiBase.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/LayoutConstraint.h
+c000000004DFFC85C00000000000009F1
+t1308608604
+s2545
+i<UIKit/UIKit.h>
+i"TiDimension.h"
+i"TiUtils.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/ListenerEntry.h
+c000000004DFFC85C0000000000000269
+t1308608604
+s617
+i"TiModule.h"
+i"TiEvaluator.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiAnimation.h
+c000000004DFFC85C0000000000000D5B
+t1308608604
+s3419
+i"TiProxy.h"
+i"TiPoint.h"
+i"TiColor.h"
+i"ListenerEntry.h"
+i"LayoutConstraint.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiBase.h
+c000000004E1C7E2E000000000000366B
+t1310490158
+s13931
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i"defines.h"
+i"TiThreading.h"
+i"TiPublicAPI.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiBlob.h
+c000000004DFFC85C00000000000005B5
+t1308608604
+s1461
+i"TiProxy.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiBuffer.h
+c000000004DFFC85C00000000000003B9
+t1308608604
+s953
+i<Foundation/Foundation.h>
+i"TiProxy.h"
+i"TiBlob.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiColor.h
+c000000004DFFC85C00000000000002E6
+t1308608604
+s742
+i<UIKit/UIKit.h>
+i"TiProxy.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/Ti.h
+c000000004DFFC85C000000000000071C
+t1308608604
+s1820
+i<TiCore/TiBase.h>
+i<TiCore/TiContextRef.h>
+i<TiCore/TiStringRef.h>
+i<TiCore/TiObjectRef.h>
+i<TiCore/TiValueRef.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiBase.h
+c000000004DFFC85C0000000000001A03
+t1308608604
+s6659
+i<stdbool.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiContextRef.h
+c000000004DFFC85C00000000000014D8
+t1308608604
+s5336
+i<TiCore/TiObjectRef.h>
+i<TiCore/TiValueRef.h>
+i<TiCore/WebKitAvailability.h>
+i<stdbool.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiContextRefPrivate.h
+c000000004DFFC85C0000000000000860
+t1308608604
+s2144
+i<TiCore/TiObjectRef.h>
+i<TiCore/TiValueRef.h>
+i<TiCore/WebKitAvailability.h>
+i<stdbool.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiCore.h
+c000000004DFFC85C000000000000069B
+t1308608604
+s1691
+i<TiCore/Ti.h>
+i<TiCore/TiStringRefCF.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiObjectRef.h
+c000000004DFFC85C000000000000945D
+t1308608604
+s37981
+i<TiCore/TiBase.h>
+i<TiCore/TiValueRef.h>
+i<TiCore/WebKitAvailability.h>
+i<stdbool.h>
+i<stddef.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiStringRef.h
+c000000004DFFC85C000000000000168A
+t1308608604
+s5770
+i<TiCore/TiValueRef.h>
+i<stdbool.h>
+i<stddef.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiStringRefCF.h
+c000000004DFFC85C0000000000000A3B
+t1308608604
+s2619
+i"TiBase.h"
+i<CoreFoundation/CoreFoundation.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/TiValueRef.h
+c000000004E0988BE0000000000002D42
+t1309247678
+s11586
+i<TiCore/TiBase.h>
+i<stdbool.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore/WebKitAvailability.h
+c000000004DFFC85C0000000000006BD6
+t1308608604
+s27606
+i<AvailabilityMacros.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiDimension.h
+c000000004DFFC85C000000000000119C
+t1308608604
+s4508
+i"TiBase.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiEvaluator.h
+c000000004DFFC85C00000000000004D5
+t1308608604
+s1237
+i<Foundation/Foundation.h>
+i"KrollContext.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiFile.h
+c000000004DFFC85C0000000000000368
+t1308608604
+s872
+i"TiProxy.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiGradient.h
+c000000004DFFC85C00000000000005FC
+t1308608604
+s1532
+i"TiProxy.h"
+i"TiDimension.h"
+i"TiPoint.h"
+i<CoreGraphics/CoreGraphics.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiHost.h
+c000000004DFFC85C0000000000000503
+t1308608604
+s1283
+i"TiProxy.h"
+i"Bridge.h"
+i"TiEvaluator.h"
+i"TiStylesheet.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiModule.h
+c000000004DFFC85C0000000000000409
+t1308608604
+s1033
+i"TiUtils.h"
+i"TiEvaluator.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiPoint.h
+c000000004DFFC85C00000000000002D3
+t1308608604
+s723
+i"TiProxy.h"
+i"TiDimension.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiProxy.h
+c000000004DFFC85C00000000000014B2
+t1308608604
+s5298
+i"TiBase.h"
+i"TiEvaluator.h"
+i"KrollCallback.h"
+i"KrollObject.h"
+i<pthread.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiPublicAPI.h
+c000000004DFFC85C0000000000000A67
+t1308608604
+s2663
+i<Foundation/Foundation.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiStylesheet.h
+c000000004DFFC85C00000000000002CB
+t1308608604
+s715
+i"TiBase.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiThreading.h
+c000000004DFFC85C00000000000009CE
+t1308608604
+s2510
+i<Foundation/Foundation.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiUIView.h
+c000000004DFFC85C0000000000000F04
+t1308608604
+s3844
+i"TiProxy.h"
+i"TiAnimation.h"
+i"TiGradient.h"
+i"LayoutConstraint.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiUtils.h
+c000000004E09C78C0000000000001955
+t1309263756
+s6485
+i"TiColor.h"
+i"TiDimension.h"
+i"WebFont.h"
+i"TiFile.h"
+i"TiBuffer.h"
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiViewProxy.h
+c000000004E1C5E520000000000001DC8
+t1310482002
+s7624
+i"TiProxy.h"
+i"TiUIView.h"
+i<pthread.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/WebFont.h
+c000000004DFFC85C0000000000000409
+t1308608604
+s1033
+i<UIKit/UIKit.h>
+
+N/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/defines.h
+c000000004DFFC85C00000000000008C7
+t1308608604
+s2247
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/AgCalendar_Prefix.pch
+c000000004E8C83DD000000000000003E
+t1317831645
+s62
+i<Foundation/Foundation.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.h
+c000000004E8C48460000000000000599
+t1317816390
+s1433
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m
+c000000004E8C481300000000000006A8
+t1317816339
+s1704
+i"Event.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.h
+c000000004E8A0E7000000000000003D3
+t1317670512
+s979
+i"Kal.h"
+i"Globals.h"
+i<dispatch/dispatch.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m
+c000000004E8C879700000000000013E7
+t1317832599
+s5095
+i"EventKitDataSource.h"
+i<EventKit/EventKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.h
+c000000004E8C87480000000000000287
+t1317832520
+s647
+i"Kal.h"
+i<sqlite3.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m
+c000000004E8C879B0000000000001A27
+t1317832603
+s6695
+i"SQLDataSource.h"
+i"Event.h"
+i"TiUtils.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.h
+c000000004E8C874400000000000001A5
+t1317832516
+s421
+i<Foundation/Foundation.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m
+c000000004E8C87430000000000000486
+t1317832515
+s1158
+i"Globals.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.h
+c000000004E8C83DD00000000000000F0
+t1317831645
+s240
+i"TiModule.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m
+c000000004E8C83DD00000000000008A6
+t1317831645
+s2214
+i"AgCalendarModule.h"
+i"TiBase.h"
+i"TiHost.h"
+i"TiUtils.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.h
+c000000004E8C83DD000000000000009E
+t1317831645
+s158
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m
+c000000004E8C83DD0000000000000104
+t1317831645
+s260
+i"AgCalendarModuleAssets.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.h
+c000000004E8C8750000000000000020F
+t1317832528
+s527
+i"TiProxy.h"
+i<EventKit/EventKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m
+c000000004E8C875300000000000011F5
+t1317832531
+s4597
+i"AgCalendarEventProxy.h"
+i"TiUtils.h"
+i"TiBase.h"
+i<EventKit/EventKit.h>
+i<Foundation/NSFormatter.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.h
+c000000004E8C87570000000000000265
+t1317832535
+s613
+i"TiUIView.h"
+i"Kal.h"
+i"Globals.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m
+c000000004E8C87580000000000000B71
+t1317832536
+s2929
+i"AgCalendarView.h"
+i"TiUtils.h"
+i"Event.h"
+i"SQLDataSource.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.h
+c000000004E8C875900000000000000DE
+t1317832537
+s222
+i"TiViewProxy.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m
+c000000004E8C875B000000000000017F
+t1317832539
+s383
+i"AgCalendarViewProxy.h"
+i"TiUtils.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/Kal.h
+c000000004E84B8D50000000000000792
+t1317320917
+s1938
+i"KalViewController.h"
+i"KalDataSource.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.h
+c000000004E84B8D50000000000000E03
+t1317320917
+s3587
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m
+c000000004E888E440000000000000569
+t1317572164
+s1385
+i"KalDataSource.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.h
+c000000004E84B8D50000000000000297
+t1317320917
+s663
+i<Foundation/Foundation.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m
+c000000004E84B8D50000000000000919
+t1317320917
+s2329
+i"KalDate.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.h
+c000000004E84B8D5000000000000047F
+t1317320917
+s1151
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m
+c000000004E8C878A0000000000001E7D
+t1317832586
+s7805
+i<CoreGraphics/CoreGraphics.h>
+i"KalGridView.h"
+i"KalView.h"
+i"KalMonthView.h"
+i"KalTileView.h"
+i"KalLogic.h"
+i"KalDate.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.h
+c000000004E84B8D5000000000000075D
+t1317320917
+s1885
+i<Foundation/Foundation.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m
+c000000004E84B8D500000000000011E0
+t1317320917
+s4576
+i"KalLogic.h"
+i"KalDate.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.h
+c000000004E84B8D5000000000000025F
+t1317320917
+s607
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m
+c000000004E8C878E0000000000000B52
+t1317832590
+s2898
+i<CoreGraphics/CoreGraphics.h>
+i"KalMonthView.h"
+i"KalTileView.h"
+i"KalView.h"
+i"KalDate.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalPrivate.h
+c000000004E84B8D500000000000000A4
+t1317320917
+s164
+i"UIViewAdditions.h"
+i"NSDateAdditions.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.h
+c000000004E84B8D5000000000000033B
+t1317320917
+s827
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m
+c000000004E8C879100000000000018D1
+t1317832593
+s6353
+i"KalTileView.h"
+i"KalDate.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.h
+c000000004E84B8D50000000000000951
+t1317320917
+s2385
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m
+c000000004E8C8785000000000000292D
+t1317832581
+s10541
+i"KalView.h"
+i"KalGridView.h"
+i"KalLogic.h"
+i"KalPrivate.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.h
+c000000004E84B8D500000000000008B5
+t1317320917
+s2229
+i<UIKit/UIKit.h>
+i"KalView.h"
+i"KalDataSource.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m
+c000000004E84B8D50000000000001661
+t1317320917
+s5729
+i"KalViewController.h"
+i"KalLogic.h"
+i"KalDataSource.h"
+i"KalDate.h"
+i"KalPrivate.h"
+i<mach/mach_time.h>
+i<time.h>
+i<math.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.h
+c000000004E84B8D50000000000000289
+t1317320917
+s649
+i<Foundation/Foundation.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m
+c000000004E84B8D5000000000000092B
+t1317320917
+s2347
+i"NSDateAdditions.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.h
+c000000004E84B8D50000000000000184
+t1317320917
+s388
+i<UIKit/UIKit.h>
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m
+c000000004E84B8D500000000000004ED
+t1317320917
+s1261
+i"UIViewAdditions.h"
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/libAgCalendar.a
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendar.LinkFileList
+c000000004E8C88770000000000000D00
+t1317832823
+s3328
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o
+t2
+s0
+
+N/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o
+t2
+s0
+
+N/var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesee3ddcf6bf3cb441^0c59c5f7bf3cb441^---0#1#0#--18"Check dependencies
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.262794
+e339525626.509156
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m6af743fabf3cb441^215782fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m0000000000000000^2858"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o Classes/Proxy/AgCalendarEventProxy.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Proxy/AgCalendarEventProxy.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarEventProxy.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.223282
+e339525626.414115
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m346739fabf3cb441^97026afabf3cb441^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m0000000000000000^2844"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o Classes/Module/AgCalendarModule.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModule.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModule.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.254488
+e339525626.303839
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m0c5941fabf3cb441^2ac64dfabf3cb441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m0000000000000000^2868"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o Classes/Module/AgCalendarModuleAssets.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Module/AgCalendarModuleAssets.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarModuleAssets.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.297338
+e339525626.567264
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: incomplete implementation of class ‘AgCalendarView’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-didSelectDate:’ not found
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-showFollowingMonth’ not found
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-showPreviousMonth’ not found
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: class ‘AgCalendarView’ does not fully implement the ‘KalViewDelegate’ protocol
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m88494cfabf3cb441^b53691fabf3cb441^-907"/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: incomplete implementation of class ‘AgCalendarView’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-didSelectDate:’ not found/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-showFollowingMonth’ not found/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: method definition for ‘-showPreviousMonth’ not found/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m:100: warning: class ‘AgCalendarView’ does not fully implement the ‘KalViewDelegate’ protocol5(21%IDEActivityLogMessage2@55"Incomplete implementation of class ‘AgCalendarView’-339525626#0#171#-1#-23%DVTTextDocumentLocation3@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^99#18446744073709551615#99#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@53"Method definition for ‘-didSelectDate:’ not found-339525626#171#169#-1#-3@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^99#18446744073709551615#99#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@57"Method definition for ‘-showFollowingMonth’ not found-339525626#340#173#-1#-3@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^99#18446744073709551615#99#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@56"Method definition for ‘-showPreviousMonth’ not found-339525626#513#172#-1#-3@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^99#18446744073709551615#99#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@86"Class ‘AgCalendarView’ does not fully implement the ‘KalViewDelegate’ protocol-339525626#685#198#-1#-3@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^99#18446744073709551615#99#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation4@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m0000000000000000^2832"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o Classes/View/AgCalendarView.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarView.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarView.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.305209
+e339525626.482610
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m054e4efabf3cb441^378b7bfabf3cb441^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m0000000000000000^2852"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o Classes/View/AgCalendarViewProxy.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/View/AgCalendarViewProxy.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendarViewProxy.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.124262
+e339525626.261415
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m61fd1ffabf3cb441^5ef742fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m0000000000000000^2808"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o Classes/Datasource/Event.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/Event.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Event.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.135090
+e339525626.546428
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m50c422fabf3cb441^33e18bfabf3cb441^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m0000000000000000^2860"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o Classes/Datasource/EventKitDataSource.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/EventKitDataSource.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/EventKitDataSource.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.219431
+e339525626.321670
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m205d38fabf3cb441^a85752fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m0000000000000000^2794"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o Classes/Globals.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Globals.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/Globals.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.467795
+e339525626.012927
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m14e877f9bf3cb441^4e5f03fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m0000000000000000^2822"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o Libraries/KalDataSource.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDataSource.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDataSource.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.467962
+e339525626.081772
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m32e977f9bf3cb441^0bed14fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m0000000000000000^2798"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o Libraries/KalDate.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalDate.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalDate.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.467987
+e339525626.221824
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.mecf877f9bf3cb441^47c838fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m0000000000000000^2814"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o Libraries/KalGridView.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalGridView.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalGridView.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.467993
+e339525626.148980
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m3ffd77f9bf3cb441^752126fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m0000000000000000^2802"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o Libraries/KalLogic.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalLogic.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalLogic.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.468073
+e339525626.133723
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m100478f9bf3cb441^2e3922fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m0000000000000000^2818"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o Libraries/KalMonthView.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalMonthView.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalMonthView.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.468086
+e339525626.217138
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.mc40578f9bf3cb441^cfa237fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m0000000000000000^2814"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o Libraries/KalTileView.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalTileView.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalTileView.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.468122
+e339525626.295993
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m180a78f9bf3cb441^26c54bfabf3cb441^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m0000000000000000^2798"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o Libraries/KalView.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalView.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalView.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525625.468430
+e339525626.253071
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m981778f9bf3cb441^99d840fabf3cb441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m0000000000000000^2838"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o Libraries/KalViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/KalViewController.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/KalViewController.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.014237
+e339525626.122933
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m56d503fabf3cb441^81761ffabf3cb441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m0000000000000000^2830"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o Libraries/NSDateAdditions.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/NSDateAdditions.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/NSDateAdditions.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.150364
+e339525626.597672
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m: In function ‘-[SQLDataSource addEvent:startDate:endDate:location:attendees:note:identifier:type:]’:
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: (Messages without a matching method signature
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: will be assumed to return ‘id’ and accept
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: ‘...’ as arguments.)
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:124: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:125: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:126: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:127: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+o/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:128: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.ma3ad26fabf3cb441^97ff98fabf3cb441^-1934"/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m: In function ‘-[SQLDataSource addEvent:startDate:endDate:location:attendees:note:identifier:type:]’:/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: (Messages without a matching method signature/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: will be assumed to return ‘id’ and accept/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:123: warning: ‘...’ as arguments.)/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:124: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:125: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:126: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:127: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m:128: warning: ‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’9(21%IDEActivityLogMessage2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#211#197#-1#-23%DVTTextDocumentLocation3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^122#18446744073709551615#122#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)-339525626#408#170#-0#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^122#18446744073709551615#122#18446744073709551615#18446744073709551615#0#14"GCC 4.2 Notice--2@45"Will be assumed to return ‘id’ and accept-339525626#578#166#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^122#18446744073709551615#122#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@24"‘...’ as arguments.)-339525626#744#145#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^122#18446744073709551615#122#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#889#197#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^123#18446744073709551615#123#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#1086#197#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^124#18446744073709551615#124#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#1283#197#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^125#18446744073709551615#125#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#1480#197#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^126#18446744073709551615#126#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--2@80"‘SQLDataSource’ may not respond to ‘-throwException:subreason:location:’-339525626#1677#197#-1#-3@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^127#18446744073709551615#127#18446744073709551615#18446744073709551615#0#15"GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation4@127"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m0000000000000000^2840"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o Classes/Datasource/SQLDataSource.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Classes/Datasource/SQLDataSource.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/SQLDataSource.o"
+
+CCompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525626.083074
+e339525626.305351
+r1
+xCompileC
+xbuild/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m797615fabf3cb441^b22a4efabf3cb441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m0000000000000000^2830"CompileC build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o Libraries/UIViewAdditions.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -include /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/Libraries/UIViewAdditions.m" -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/UIViewAdditions.o"
+
+CLibtool "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/libAgCalendar.a" normal i386
+s339525626.605322
+e339525626.637732
+r1
+xLibtool
+x/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/libAgCalendar.a
+xnormal
+xi386
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: file: /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libsqlite3.dylib is a dynamic library, not added to the static library
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Libtool build/Release-iphonesimulator/libAgCalendar.a normal i386e50a9bfabf3cb441^7d41a3fabf3cb441^---0#0#0#--1129"Libtool build/Release-iphonesimulator/libAgCalendar.a normal i386    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk "-L/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -filelist "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/Objects-normal/i386/AgCalendar.LinkFileList" /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/libsqlite3.dylib -framework EventKitUI -framework Foundation -o "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/libAgCalendar.a"
+
+CProcessPCH /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch AgCalendar_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s339525623.782888
+e339525625.460461
+r1
+xProcessPCH
+x/var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch
+xAgCalendar_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile AgCalendar_Prefix.pch9390c8f7bf3cb441^65df75f9bf3cb441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/agchris/Documents/Appgutta%20DA/Development/Xcode/Products/AGCalendar/AgCalendar_Prefix.pch0000000000000000^2708"ProcessPCH /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch AgCalendar_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2    cd "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-generated-files.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-own-target-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-all-target-headers.hmap" -iquote "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/AgCalendar-project-headers.hmap" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include" "-I/Library/Application Support/Titanium/mobilesdk/osx/1.7.3.v20110826161351/iphone/include/TiCore" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources/i386" "-I/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/agcalendar.build/Release-iphonesimulator/agcalendar.build/DerivedSources" "-F/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/build/Release-iphonesimulator" -c "/Users/agchris/Documents/Appgutta DA/Development/Xcode/Products/AGCalendar/AgCalendar_Prefix.pch" -o /var/folders/3f/55gt8d_93v144kbbhtjcg2940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AgCalendar_Prefix-hatcysgvgnvfotcvzjnfgcutznlh/AgCalendar_Prefix.pch.gch
+
