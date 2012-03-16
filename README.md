@@ -122,7 +122,7 @@ When adding this to the calendar-view you will get all event-data in a single ar
 
 ## Usage
 
-Check out the example [app.js](AGCalendar/example/app.js).
+Check out the example [app.js](AGCalendar/blob/master/example/app.js).
 
 ## Author
 
