@@ -89,11 +89,6 @@ todayButton.addEventListener("click", function() {
 calendarView.addEventListener('event:clicked', function(e) {
 	var event = e.event;
 	
-	// Use the built in detailsView
-	Ti.Calendar.showDetails(event);
-	
-	// ...or create your own.
-	
 	// Dates retrieved from our API is strings.
 	// If you want to create a Date() object, its as easy
 	// as inputing our date-string to the Date() object
