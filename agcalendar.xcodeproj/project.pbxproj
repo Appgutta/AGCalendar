@@ -60,8 +60,6 @@
 		CEEF66F4143CBDB000FD8155 /* AgCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E0143CBDAF00FD8155 /* AgCalendarModule.m */; };
 		CEEF66F5143CBDB000FD8155 /* AgCalendarModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E1143CBDAF00FD8155 /* AgCalendarModuleAssets.h */; };
 		CEEF66F6143CBDB000FD8155 /* AgCalendarModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E2143CBDAF00FD8155 /* AgCalendarModuleAssets.m */; };
-		CEEF66F7143CBDB000FD8155 /* AgCalendarEventProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */; };
-		CEEF66F8143CBDB000FD8155 /* AgCalendarEventProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */; };
 		CEEF66F9143CBDB000FD8155 /* AgCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E7143CBDB000FD8155 /* AgCalendarView.h */; };
 		CEEF66FA143CBDB000FD8155 /* AgCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66E8143CBDB000FD8155 /* AgCalendarView.m */; };
 		CEEF66FB143CBDB000FD8155 /* AgCalendarViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66E9143CBDB000FD8155 /* AgCalendarViewProxy.h */; };
@@ -141,8 +139,6 @@
 		CEEF66E0143CBDAF00FD8155 /* AgCalendarModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarModule.m; sourceTree = "<group>"; };
 		CEEF66E1143CBDAF00FD8155 /* AgCalendarModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarModuleAssets.h; sourceTree = "<group>"; };
 		CEEF66E2143CBDAF00FD8155 /* AgCalendarModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarModuleAssets.m; sourceTree = "<group>"; };
-		CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarEventProxy.h; sourceTree = "<group>"; };
-		CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarEventProxy.m; sourceTree = "<group>"; };
 		CEEF66E7143CBDB000FD8155 /* AgCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarView.h; sourceTree = "<group>"; };
 		CEEF66E8143CBDB000FD8155 /* AgCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgCalendarView.m; sourceTree = "<group>"; };
 		CEEF66E9143CBDB000FD8155 /* AgCalendarViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendarViewProxy.h; sourceTree = "<group>"; };
@@ -225,7 +221,6 @@
 				CEEF66DD143CBDAF00FD8155 /* Globals.m */,
 				CEEF66D5143CBDAF00FD8155 /* Datasource */,
 				CEEF66DE143CBDAF00FD8155 /* Module */,
-				CEEF66E3143CBDAF00FD8155 /* Proxy */,
 				CEEF66E6143CBDB000FD8155 /* View */,
 			);
 			name = Classes;
@@ -297,16 +292,6 @@
 			path = Classes/Module;
 			sourceTree = "<group>";
 		};
-		CEEF66E3143CBDAF00FD8155 /* Proxy */ = {
-			isa = PBXGroup;
-			children = (
-				CEEF66E4143CBDAF00FD8155 /* AgCalendarEventProxy.h */,
-				CEEF66E5143CBDAF00FD8155 /* AgCalendarEventProxy.m */,
-			);
-			name = Proxy;
-			path = Classes/Proxy;
-			sourceTree = "<group>";
-		};
 		CEEF66E6143CBDB000FD8155 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,7 +358,6 @@
 				CEEF66F1143CBDB000FD8155 /* Globals.h in Headers */,
 				CEEF66F3143CBDB000FD8155 /* AgCalendarModule.h in Headers */,
 				CEEF66F5143CBDB000FD8155 /* AgCalendarModuleAssets.h in Headers */,
-				CEEF66F7143CBDB000FD8155 /* AgCalendarEventProxy.h in Headers */,
 				CEEF66F9143CBDB000FD8155 /* AgCalendarView.h in Headers */,
 				CEEF66FB143CBDB000FD8155 /* AgCalendarViewProxy.h in Headers */,
 				CE788D1F143D03CE005F61EF /* NSString+MD5.h in Headers */,
@@ -495,7 +479,6 @@
 				CEEF66F2143CBDB000FD8155 /* Globals.m in Sources */,
 				CEEF66F4143CBDB000FD8155 /* AgCalendarModule.m in Sources */,
 				CEEF66F6143CBDB000FD8155 /* AgCalendarModuleAssets.m in Sources */,
-				CEEF66F8143CBDB000FD8155 /* AgCalendarEventProxy.m in Sources */,
 				CEEF66FA143CBDB000FD8155 /* AgCalendarView.m in Sources */,
 				CEEF66FC143CBDB000FD8155 /* AgCalendarViewProxy.m in Sources */,
 				CE788D20143D03CE005F61EF /* NSString+MD5.m in Sources */,

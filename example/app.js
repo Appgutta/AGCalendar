@@ -98,7 +98,7 @@ calendarView.addEventListener('event:clicked', function(e) {
 	// Now you can trigger all date functions
 	// http://www.w3schools.com/jsref/jsref_obj_date.asp
 	// This example utilizes the toUTCString to show date according to universal time
-	alert("This event will start: "+toDateObj.toUTCString());
+	//alert("This event will start: "+toDateObj.toUTCString());
 });
 
 window.setLeftNavButton(hideButton);
