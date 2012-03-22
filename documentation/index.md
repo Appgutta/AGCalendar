@@ -89,7 +89,7 @@ Nothing more, nothing less..
 >     var todayButton = Ti.UI.createButton({title: "Today"});
 
 >     todayButton.addEventListener("click", function() {
-        Ti.Calendar.selectTodaysDate();
+        calendarView.selectTodaysDate();
     });
 
 >     window.setLeftNavButton(todayButton);
@@ -98,7 +98,7 @@ Properties
 --------
 ## `Ti.Calendar.identifier (read-only)`
 
-This can be used for the ***identifier***-parameter in the *createView()*-instance. 
+This can be used for the ***identifier***-parameter in the *addEvent()*-instance. 
 
 ### Returns
 * [string] MD5 sum of globallyUniqueString
