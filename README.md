@@ -6,7 +6,7 @@ AGCalendar enables you to access the native calendar on your iPhone, iPad or iPo
 * **EventKit**: All events including the events in your native calendar will be shown. Events added will also be added to your native iCal.
 * **CoreData**: Uses Core Data to store your calendar-events. Only events added by your application will be shown. Added events will not be added to iCal. This also allows you to add more details to your events. 
 
-> <img src="http://f.cl.ly/items/3h3B2K2O2q3p2Y2J1c2e/screen1.png" height="230" style="margin-right:20px;" />
+> <img src="http://f.cl.ly/items/1h3O0S3p2T0f1K2G2h1w/info1.png" height="228" style="margin-right:20px;" />
 
 
 Accessing the Calendar Module
@@ -100,7 +100,7 @@ Nothing more, nothing less..
 >     var todayButton = Ti.UI.createButton({title: "Today"});
 
 >     todayButton.addEventListener("click", function() {
-        Ti.Calendar.selectTodaysDate();
+        calendarView.selectTodaysDate();
     });
 
 >     window.setLeftNavButton(todayButton);
