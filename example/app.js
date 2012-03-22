@@ -1,71 +1,33 @@
 /**
- * Calendar Module for Titanium - Advanced example
- *
- * Showing the main functionality of the Calendar.
+ * Calendar Module for Titanium
+ * Read the documentation for more information
  */
 
 // Start off by creating an instance of the module.
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
-// Datasource - Read documentation
-Ti.Calendar.dataSource("coredata");
+// Set EventKit as our datasource
+Ti.Calendar.dataSource("eventkit");
 
-// Add an event to the calendar
-var endDate = new Date();
-endDate.setHours(endDate.getHours()+3);
-
-var calEvent = {};
-calEvent.title = "Remember tomorrow!";
-calEvent.startDate = new Date();
-calEvent.endDate = endDate;
-calEvent.location = "Silicon Valley";
-calEvent.note = "Send your condolences!";
-
-// The following will only work when using Core Data as your dataSource.
-// Just remove it if you are using EventKit.
-calEvent.attendees = "Bill Gates, Mark Zuckerberg";
-calEvent.identifier = Ti.Calendar.identifier; // Will generate a globally unique identifier for you. (MD5(GUID))
-calEvent.type = "private";
-calEvent.organizer = "Chris";
-
-// Save it!
-Ti.Calendar.addEvent(calEvent);
-
-// Can also be done like this:
-/*Ti.Calendar.addEvent({
-	title: "Honor Steve Jobs",
-	startDate: new Date(),
-	endDate: endDate,
-	location: "Silicon Valley",
-	identifier: Ti.Calendar.identifier,
-	type:"private",
-	attendees: "Bill Gates, Mark Zuckerberg",
-	note: "Send your condolences!",
-	organizer: "Chris"
-});*/
-
-// Open the first shiny white window
+// Create a window to hold our calendar
 var window = Ti.UI.createWindow({
 	title: "Calendar",
 	backgroundColor: "#fff",
 	modal:true
 });
 
-// Our first initiation of the actual Calendar View.
+// Now, create the calendar view and enable swipe-to-delete 
+// by using editable: true
 var calendarView = Ti.Calendar.createView({
 	top:0,
 	editable: true,
 	color:"white"
 });
 
-// Hide the calendar.
+// Button to hide our calendar
 var hideButton = Ti.UI.createButton({title:"Hide"});
 
-// Select todays date
-var todayButton = Ti.UI.createButton({title:"Today"});
-
-// Eventlistener on the close-button.
-// This will close the window containing our calendar.
+// Eventlistener
 hideButton.addEventListener("click", function() {
 	if (hideButton.title == "Hide") {
 		calendarView.animate({opacity:0, duration:400}, function() {
@@ -79,21 +41,26 @@ hideButton.addEventListener("click", function() {
 	}
 });
 
-// Eventlistener on the today-button.
-// This will select todays date in the calendar.
+// Button to select todays date
+var todayButton = Ti.UI.createButton({title:"Today"});
+
+// Eventlistener
 todayButton.addEventListener("click", function() {
 	calendarView.selectTodaysDate();
 });
 
-// Eventlistener on our Calendar.
-// This will give you all the data stored in each event.
+// Now, let's create an eventlistener to get the data we want
+// from our calendar. This event will fire when a user touches
+// an event in the tableview.
 calendarView.addEventListener('event:clicked', function(e) {
 	var event = e.event;
 	
-	// Dates retrieved from our API is strings.
-	// If you want to create a Date() object, its as easy
-	// as inputing our date-string to the Date() object
-	// as shown below.
+	// Log event details
+	Ti.API.info(JSON.stringify(event));
+	
+	// Event dates is returned as strings.
+	// To convert the string to a Date() object, input
+	// the string in a Date([string]) as shown below.
 	var toDateObj = new Date(event.startDate);
 	
 	// Now you can trigger all date functions
@@ -102,7 +69,83 @@ calendarView.addEventListener('event:clicked', function(e) {
 	Ti.API.info("This event will start: "+toDateObj.toUTCString());
 });
 
+// ---- EVENTS
+
+// Now we'll create some different events.
+// Event 1: An event starting and ending the same day.
+// Let's start by creating our date object.
+var endDate = new Date();
+endDate.setHours(endDate.getHours()+3);
+
+// Add event to our calendar.
+Ti.Calendar.addEvent({
+	title: "Starting and ending today",
+	startDate: new Date(),
+	endDate: endDate,
+	location: "At home",
+	note: "A note",
+	// CoreData only
+	// Read the docs
+	identifier: Ti.Calendar.identifier,
+	type:"private",
+	attendees: "Bill Gates, Mark Zuckerberg",
+	organizer: "Chris"
+});
+
+// Event 2: An event recurring every month for one year.
+// First, create a recurring end-date.
+var recurringEnd = new Date();
+recurringEnd.setFullYear(recurringEnd.getFullYear()+1);
+
+// We are gonna use a different way of adding our event 
+// to the calendar this time. The first method will work just
+// fine, but you may want to build your events using input from
+// your users. I'll show you how
+var recurringEvent = {};
+recurringEvent.title = "Every month for one year";
+recurringEvent.startDate = new Date();
+recurringEvent.endDate = endDate;
+recurringEvent.location = "At home";
+recurringEvent.note = "A note";
+// EventKit only
+recurringEvent.recurrence = { frequency: "month", interval: 1, end: recurringEnd };
+
+// CoreData only
+recurringEvent.identifier = Ti.Calendar.identifier;
+recurringEvent.type = "private";
+recurringEvent.attendees = "Bill Gates, Mark Zuckerberg";
+recurringEvent.organizer = "Chris";
+
+Ti.Calendar.addEvent(recurringEvent);
+
+// Just to illustrate the recurring event function, we'll create
+// an event recurring every other day for one month using our first method.
+var recurringEnd2 = new Date();
+recurringEnd2.setMonth(recurringEnd2.getMonth()+1);
+
+// The event
+Ti.Calendar.addEvent({
+	title: "Every other day for one month",
+	startDate: new Date(),
+	endDate: endDate,
+	location: "At home",
+	note: "A note",
+	recurrence: { 
+		frequency: "day", // day, week, month, year
+		interval: 2,
+		end: recurringEnd2 
+	}
+});
+
+// Add everything to our window and open it.
 window.setLeftNavButton(hideButton);
 window.setRightNavButton(todayButton);
 window.add(calendarView);
 window.open({animated: false});
+
+// There seems to be an issue with the Kal library
+// When 3 or more events are added it duplicates itself.
+// This fix takes care of it while im figuring out whats wrong.
+setTimeout(function() {
+	calendarView.selectTodaysDate();
+},1000);

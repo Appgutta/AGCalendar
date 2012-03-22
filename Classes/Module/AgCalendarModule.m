@@ -105,6 +105,14 @@
     NSString *fromDate = [dateFormat stringFromDate:startDate];
     NSString *toDate = [dateFormat stringFromDate:endDate];
     
+    NSDictionary *ev = [[[NSDictionary alloc] init] autorelease];
+    
+    if ([event objectForKey:@"recurrence"] != nil) {
+        ev = [event objectForKey:@"recurrence"];
+    } else {
+        ev = nil;
+    }
+    
     global = [Globals sharedDataManager];
     if ([global.dbSource isEqualToString:@"coredata"]) {
         dataStore = [[SQLDataSource alloc] init];
@@ -123,7 +131,8 @@
                   startDate:startDate
                     endDate:endDate
                    location:[event objectForKey:@"location"]
-                      notes:[event objectForKey:@"note"]];
+                      notes:[event objectForKey:@"note"]
+                 recurrence:ev];
     }
     
     [dataStore release];

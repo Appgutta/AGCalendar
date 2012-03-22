@@ -56,6 +56,8 @@ This will add an event to your calendar object.
  * [string] **note**: Event notes.
  * [date] **startDate**: Events start. (Javascript date object)
  * [date] **endDate**: Events end. (Javascript date object) 
+ * [object] **recurrence**: Recurrence rule (**EventKit only**)
+
 * **Core Data** (Including the above)      
 
  * [string] **type**: Event type. E.g: *public* or *private*
@@ -67,6 +69,10 @@ This will add an event to your calendar object.
 >     var endDate = new Date();
 	endDate.setHours(endDate.getHours()+3); // Set event to last 3 hours.
 
+>     // Date to end our recurring event
+	var recurringEnd = new Date();
+	recurringEnd.setMonth(recurringEnd.getMonth()+6); // Recurring ends in 6 months
+
 >     calendar.addEvent({
         title: "Attend the 2011 WWDC conference",   
         startDate: new Date(),  
@@ -76,7 +82,12 @@ This will add an event to your calendar object.
         type:"public",
         attendees: "Steve, Phil",
         organizer: "Chris Magnussen",
-        note: "Be mad about not getting the iPhone 5"  
+        note: "Be mad about not getting the iPhone 5",
+        recurrence: {
+	         frequency: "month", // day, week, month, year
+	         interval: 1,
+	         end: recurringEnd
+        }
     });
 
 ## `calendarView.selectTodaysDate([void])`
@@ -89,7 +100,7 @@ Nothing more, nothing less..
 >     var todayButton = Ti.UI.createButton({title: "Today"});
 
 >     todayButton.addEventListener("click", function() {
-        calendarView.selectTodaysDate();
+        Ti.Calendar.selectTodaysDate();
     });
 
 >     window.setLeftNavButton(todayButton);
@@ -98,7 +109,7 @@ Properties
 --------
 ## `Ti.Calendar.identifier (read-only)`
 
-This can be used for the ***identifier***-parameter in the *addEvent()*-instance. 
+This can be used for the ***identifier***-parameter in the *createView()*-instance. 
 
 ### Returns
 * [string] MD5 sum of globallyUniqueString
@@ -132,7 +143,7 @@ When adding this to the calendar-view you will get all event-data in a single ar
 
 ## Usage
 
-Check out the example [app.js](AGCalendar/blob/master/example/app.js).
+See example.
 
 ## Author
 
@@ -143,7 +154,7 @@ Chris Magnussen for Appgutta, DA.
 
 License
 ------
-Copyright(c) 2011 by Appgutta, DA. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
+Copyright(c) 2012 by Appgutta, DA. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
 
 
 [Twitter]: http://twitter.com/crmag

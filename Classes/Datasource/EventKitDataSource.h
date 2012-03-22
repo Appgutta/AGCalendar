@@ -20,7 +20,7 @@
 
 + (EventKitDataSource *)dataSource;
 - (EKEvent *)eventAtIndexPath:(NSIndexPath *)indexPath;
-- (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes;
+- (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence;
 - (BOOL)deleteEvent:(id)args;
 
 @end
