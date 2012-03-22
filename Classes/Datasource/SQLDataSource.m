@@ -88,6 +88,30 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return [items objectAtIndex:indexPath.row];
 }
 
+#pragma mark UITableViewDataSource protocol conformance
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    glob = [Globals sharedDataManager];
+    return glob.viewEditable;
+}
+
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Event *ev = [self eventAtIndexPath:indexPath];
+        [self deleteEvent:ev.identifier];
+        [events removeObjectAtIndex:indexPath.row];
+        [items removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    }
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"Calendar";
@@ -170,29 +194,35 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 -(BOOL)deleteEvent:(NSString *)identifier
 {
-    sqlite3_stmt *statement;
     BOOL result;
+    if ([self checkEvent:identifier] == YES) {
+        sqlite3_stmt *statement;
     
-    const char *dbpath = [databasePath UTF8String];
+        const char *dbpath = [databasePath UTF8String];
     
-    if (sqlite3_open(dbpath, &db) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat: @"delete from Events where identifier='%@';", identifier];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        
-        if (sqlite3_prepare_v2(db, query_stmt, -1, &statement, NULL) == SQLITE_DONE)
+        if (sqlite3_open(dbpath, &db) == SQLITE_OK)
         {
-            result = YES;
+            NSLog(@"DELETE FROM Events WHERE identifier='%@'", identifier);
+            NSString *querySQL = [NSString stringWithFormat: @"DELETE FROM Events WHERE identifier=\"%@\"", identifier];
+        
+            const char *query_stmt = [querySQL UTF8String];
+        
+            if (sqlite3_prepare_v2(db, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+            {
+                sqlite3_exec(db,query_stmt,NULL,NULL,NULL);
+                result = YES;
+            } else {
+                result = NO;
+            }
+        
+            sqlite3_finalize(statement);
+            sqlite3_close(db);
+
         } else {
             result = NO;
         }
-        
-        sqlite3_finalize(statement);
-        sqlite3_close(db);
-
     } else {
-        result = NO;
+        NSLog(@"[INFO] No event found with identifier %@", identifier);
     }
     
     return result;

@@ -1,14 +1,6 @@
 /* 
- * Copyright (c) 2009 Keith Lazuka
- * License: http://www.opensource.org/licenses/mit-license.html
- */
-
-/*
- *    Event
- *    -------
- *
- *  An immutable value object that represents a single element
- *  in the dataset.
+ * Created by Chris Magnussen on 04.10.11.
+ * Copyright 2011 Appgutta DA. All rights reserved.
  */
 @interface Event : NSObject
 {

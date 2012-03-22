@@ -1,6 +1,6 @@
-/*
- * Copyright (c) 2010 Keith Lazuka
- * License: http://www.opensource.org/licenses/mit-license.html
+/* 
+ * Created by Chris Magnussen on 04.10.11.
+ * Copyright 2011 Appgutta DA. All rights reserved.
  */
 
 #import "Kal.h"

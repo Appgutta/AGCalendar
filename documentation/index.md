@@ -33,8 +33,18 @@ Please read the  *description* above for more information.
 ## `Ti.Calendar.createView(object)`
 This will create a calendarView with controls to move back an forth between months.
 
+### Arguments
+* [boolean] **editable**: Turns "swipe-to-delete" on or off. Defaults to  *false*
+* [string] **color**: This is required by Titanium for some reason. Just set it to "*white*"
+
 ### Example
->     var calendarView = Ti.Calendar.createView({});
+>     var calendarView = Ti.Calendar.createView({
+		top: 0,
+		editable: true,
+		color: "white"
+	});
+
+
 
 ## `Ti.Calendar.addEvent(object)`
 This will add an event to your calendar object.
@@ -122,7 +132,7 @@ When adding this to the calendar-view you will get all event-data in a single ar
 
 ## Usage
 
-See example.
+Check out the example [app.js](AGCalendar/blob/master/example/app.js).
 
 ## Author
 

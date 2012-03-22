@@ -8,6 +8,7 @@
 
 #import <sqlite3.h>
 #import "Kal.h"
+#import "Globals.h"
 
 @class Event;
 
@@ -16,6 +17,7 @@
     NSMutableArray *items;
     NSMutableArray *events;
     NSString *databasePath;
+    Globals *glob;
     sqlite3 *db;
 }
 

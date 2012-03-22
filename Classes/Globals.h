@@ -11,9 +11,11 @@
 @interface Globals : NSObject 
 {
     NSString *dbSource;
+    BOOL _viewEditable;
 }
 
 @property (nonatomic,readwrite,retain) NSString *dbSource;
+@property BOOL viewEditable;
 
 -(void) clearData;
 + (Globals*)sharedDataManager;

@@ -1,6 +1,6 @@
-/*
- * Copyright (c) 2010 Keith Lazuka
- * License: http://www.opensource.org/licenses/mit-license.html
+/* 
+ * Created by Chris Magnussen on 04.10.11.
+ * Copyright 2011 Appgutta DA. All rights reserved.
  */
 
 #import "EventKitDataSource.h"
@@ -46,6 +46,27 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 }
 
 #pragma mark UITableViewDataSource protocol conformance
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    glob = [Globals sharedDataManager];
+    return glob.viewEditable;
+}
+
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        EKEvent *event = [self eventAtIndexPath:indexPath];
+        NSError *error = nil;
+        [eventStore removeEvent:event span: EKSpanFutureEvents error:&error];
+        [items removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

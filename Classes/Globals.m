@@ -13,6 +13,7 @@
 static Globals *sharedGlobalDataManager = nil;
 
 @synthesize dbSource;
+@synthesize viewEditable = _viewEditable;
 
 + (Globals*)sharedDataManager
 {
@@ -27,6 +28,7 @@ static Globals *sharedGlobalDataManager = nil;
 -(id) init {
 	if (self=[super init]) {
         dbSource = @"";
+        _viewEditable = NO;
     }
 	return self;
     
@@ -47,6 +49,7 @@ static Globals *sharedGlobalDataManager = nil;
 
 -(void) clearData {
 	dbSource = @"";
+    _viewEditable = NO;
 }
 
 - (id)copyWithZone:(NSZone *)zone

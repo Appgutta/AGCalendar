@@ -70,21 +70,6 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
 	}
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(editingStyle == UITableViewCellEditingStyleDelete) 
-    {
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-}
-
 -(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
 {
     if (calendar!=nil)
@@ -107,6 +92,13 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
     UIColor *c = [[TiUtils colorValue:color] _color];
     KalViewController *s = [self calendar];
     s.view.backgroundColor = c;
+}
+
+-(void)setEditable_:(id)value
+{
+    g = [Globals sharedDataManager];
+    BOOL editable = [TiUtils boolValue:value];
+    g.viewEditable = editable;
 }
 
 -(void)dealloc

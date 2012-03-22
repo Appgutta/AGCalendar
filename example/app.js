@@ -8,14 +8,14 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Datasource - Read documentation
-Ti.Calendar.dataSource("eventkit");
+Ti.Calendar.dataSource("coredata");
 
 // Add an event to the calendar
 var endDate = new Date();
 endDate.setHours(endDate.getHours()+3);
 
 var calEvent = {};
-calEvent.title = "Honor Steve Jobs";
+calEvent.title = "Remember tomorrow!";
 calEvent.startDate = new Date();
 calEvent.endDate = endDate;
 calEvent.location = "Silicon Valley";
@@ -32,7 +32,7 @@ calEvent.organizer = "Chris";
 Ti.Calendar.addEvent(calEvent);
 
 // Can also be done like this:
-Ti.Calendar.addEvent({
+/*Ti.Calendar.addEvent({
 	title: "Honor Steve Jobs",
 	startDate: new Date(),
 	endDate: endDate,
@@ -42,7 +42,7 @@ Ti.Calendar.addEvent({
 	attendees: "Bill Gates, Mark Zuckerberg",
 	note: "Send your condolences!",
 	organizer: "Chris"
-});
+});*/
 
 // Open the first shiny white window
 var window = Ti.UI.createWindow({
@@ -54,7 +54,8 @@ var window = Ti.UI.createWindow({
 // Our first initiation of the actual Calendar View.
 var calendarView = Ti.Calendar.createView({
 	top:0,
-	color:"red"
+	editable: true,
+	color:"white"
 });
 
 // Hide the calendar.
@@ -98,7 +99,7 @@ calendarView.addEventListener('event:clicked', function(e) {
 	// Now you can trigger all date functions
 	// http://www.w3schools.com/jsref/jsref_obj_date.asp
 	// This example utilizes the toUTCString to show date according to universal time
-	//alert("This event will start: "+toDateObj.toUTCString());
+	Ti.API.info("This event will start: "+toDateObj.toUTCString());
 });
 
 window.setLeftNavButton(hideButton);
