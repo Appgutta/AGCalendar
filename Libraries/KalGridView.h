@@ -42,4 +42,6 @@
 - (void)slideDown;
 - (void)jumpToSelectedMonth;    // see comment on KalView
 
++(CGSize) tileSize;
+
 @end
