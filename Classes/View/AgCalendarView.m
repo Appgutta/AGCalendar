@@ -55,7 +55,7 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
                                     event.organizer, @"organizer",
                             nil];
         } else {
-            EKEvent *event = [dataSource eventAtIndexPath:indexPath];
+            EKEvent *event = [[[EventKitDataSource alloc] autorelease] eventAtIndexPath:indexPath];
             eventDetails = [NSDictionary dictionaryWithObjectsAndKeys: 
                                     event.title, @"title", 
                                     event.location, @"location",

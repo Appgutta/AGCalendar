@@ -12,7 +12,7 @@
 
 @interface AgCalendarModule : TiModule 
 {
-    Event *dataStore;
+    id dataStore;
     Globals *global;
 }
 

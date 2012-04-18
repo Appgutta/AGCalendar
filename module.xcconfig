@@ -1,1 +1,1 @@
-OTHER_LDFLAGS=$(inherited) -framework EventKitUI -framework EventKit -all_load
+OTHER_LDFLAGS=$(inherited) -framework EventKitUI -framework EventKit -lsqlite3.0

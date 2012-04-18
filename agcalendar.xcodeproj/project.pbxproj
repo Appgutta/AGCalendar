@@ -26,6 +26,7 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		CE788D1F143D03CE005F61EF /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = CE788D1D143D03CE005F61EF /* NSString+MD5.h */; };
 		CE788D20143D03CE005F61EF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE788D1E143D03CE005F61EF /* NSString+MD5.m */; };
+		CE9F9C6C153EFE62001AFFCC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9F9C6A153EFE50001AFFCC /* EventKit.framework */; };
 		CEEF66BF143CBD9300FD8155 /* Kal.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66A9143CBD9300FD8155 /* Kal.h */; };
 		CEEF66C0143CBD9300FD8155 /* KalDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF66AA143CBD9300FD8155 /* KalDataSource.h */; };
 		CEEF66C1143CBD9300FD8155 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF66AB143CBD9300FD8155 /* KalDataSource.m */; };
@@ -86,7 +87,6 @@
 		CEEF672A143CBE1A00FD8155 /* kal_tile_today.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6712143CBDE200FD8155 /* kal_tile_today.png */; };
 		CEEF672B143CBE1A00FD8155 /* kal_tile_today_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEF6713143CBDE200FD8155 /* kal_tile_today_selected.png */; };
 		CEEF672D143CBE2A00FD8155 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */; };
-		CEEF672F143CBE3400FD8155 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +105,7 @@
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE788D1D143D03CE005F61EF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		CE788D1E143D03CE005F61EF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		CE9F9C6A153EFE50001AFFCC /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		CEEF66A9143CBD9300FD8155 /* Kal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kal.h; sourceTree = "<group>"; };
 		CEEF66AA143CBD9300FD8155 /* KalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDataSource.h; sourceTree = "<group>"; };
 		CEEF66AB143CBD9300FD8155 /* KalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDataSource.m; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		CEEF6712143CBDE200FD8155 /* kal_tile_today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_today.png; sourceTree = "<group>"; };
 		CEEF6713143CBDE200FD8155 /* kal_tile_today_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kal_tile_today_selected.png; sourceTree = "<group>"; };
 		CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libAgCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAgCalendar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,9 +174,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEF672F143CBE3400FD8155 /* libsqlite3.dylib in Frameworks */,
 				CEEF672D143CBE2A00FD8155 /* EventKitUI.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				CE9F9C6C153EFE62001AFFCC /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +207,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEEF672E143CBE3400FD8155 /* libsqlite3.dylib */,
+				CE9F9C6A153EFE50001AFFCC /* EventKit.framework */,
 				CEEF672C143CBE2A00FD8155 /* EventKitUI.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
@@ -500,21 +500,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/AgCalendar.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
+				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AgCalendar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(TITANIUM_BASE_SDK)/**",
+					"$(TITANIUM_BASE_SDK2)/**",
+				);
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
 				PRODUCT_NAME = AgCalendar;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "ipados ipadsimulator iphonesimulator iphoneos";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,14 +538,28 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/AgCalendar.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AgCalendar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(TITANIUM_BASE_SDK)/**",
+					"$(TITANIUM_BASE_SDK2)/**",
+				);
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DTI_POST_1_2";
 				PRODUCT_NAME = AgCalendar;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -539,14 +567,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiCalendar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
+				WARNING_LDFLAGS = "-ObjC";
+				WRAPPER_EXTENSION = AGCalendar;
 			};
 			name = Debug;
 		};
@@ -554,13 +591,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiCalendar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
+				WARNING_LDFLAGS = "-ObjC";
+				WRAPPER_EXTENSION = AGCalendar;
 			};
 			name = Release;
 		};

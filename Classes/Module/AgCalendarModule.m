@@ -114,8 +114,8 @@
     }
     
     global = [Globals sharedDataManager];
+    dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
     if ([global.dbSource isEqualToString:@"coredata"]) {
-        dataStore = [[SQLDataSource alloc] init];
         [dataStore addEvent:[event objectForKey:@"title"] 
                   startDate:fromDate
                     endDate:toDate
@@ -126,7 +126,6 @@
                        type:[event objectForKey:@"type"]
                   organizer:[event objectForKey:@"organizer"]];
     } else {
-        dataStore = [[EventKitDataSource alloc] init];
         [dataStore addEvent:[event objectForKey:@"title"] 
                   startDate:startDate
                     endDate:endDate
