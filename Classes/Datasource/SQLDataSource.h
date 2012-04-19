@@ -25,5 +25,6 @@
 - (Event *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer;
 - (BOOL)deleteEvent:(NSString *)identifier;
+- (BOOL)deleteAllEvents;
 
 @end

@@ -228,6 +228,38 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return result;
 }
 
+-(BOOL)deleteAllEvents
+{
+    BOOL result;
+    sqlite3_stmt *statement;
+    
+    const char *dbpath = [databasePath UTF8String];
+    
+    if (sqlite3_open(dbpath, &db) == SQLITE_OK)
+    {
+        NSLog(@"DELETE FROM Events");
+        NSString *querySQL = [NSString stringWithFormat: @"DELETE FROM Events"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(db, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_exec(db,query_stmt,NULL,NULL,NULL);
+            result = YES;
+        } else {
+            result = NO;
+        }
+        
+        sqlite3_finalize(statement);
+        sqlite3_close(db);
+        
+    } else {
+        result = NO;
+    }
+    
+    return result;
+}
+
 - (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer
 {
     

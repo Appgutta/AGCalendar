@@ -139,6 +139,19 @@
     [dateFormat release];
 }
 
+-(void)deleteAllEvents:(id)event
+{
+    ENSURE_UI_THREAD_1_ARG(event);
+    
+    global = [Globals sharedDataManager];
+    if ([global.dbSource isEqualToString:@"coredata"]) {
+        dataStore = [[SQLDataSource alloc] init];
+        [dataStore deleteAllEvents];
+    }
+    
+    [dataStore release];
+}
+
 -(id)identifier
 {
     NSString *GUID = [[NSProcessInfo processInfo] globallyUniqueString];
