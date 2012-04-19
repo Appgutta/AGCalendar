@@ -16,5 +16,10 @@
     [[self view] performSelectorOnMainThread:@selector(showAndSelectToday:) withObject:args waitUntilDone:NO];
 }
 
+-(void)selectDate:(id)args
+{
+    [[self view] performSelectorOnMainThread:@selector(selectDate:) withObject:args waitUntilDone:NO];
+}
+
 
 @end

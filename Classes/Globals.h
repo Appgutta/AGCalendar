@@ -11,10 +11,12 @@
 @interface Globals : NSObject 
 {
     NSString *dbSource;
+    NSString *theme;
     BOOL _viewEditable;
 }
 
 @property (nonatomic,readwrite,retain) NSString *dbSource;
+@property (nonatomic,readwrite,retain) NSString *theme;
 @property BOOL viewEditable;
 
 -(void) clearData;

@@ -13,6 +13,7 @@
 static Globals *sharedGlobalDataManager = nil;
 
 @synthesize dbSource;
+@synthesize theme;
 @synthesize viewEditable = _viewEditable;
 
 + (Globals*)sharedDataManager
@@ -27,6 +28,7 @@ static Globals *sharedGlobalDataManager = nil;
 
 -(id) init {
 	if (self=[super init]) {
+        theme = @"default";
         dbSource = @"";
         _viewEditable = NO;
     }
@@ -48,6 +50,7 @@ static Globals *sharedGlobalDataManager = nil;
 
 
 -(void) clearData {
+    theme = @"default";
 	dbSource = @"";
     _viewEditable = NO;
 }

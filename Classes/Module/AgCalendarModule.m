@@ -144,6 +144,13 @@
     return [GUID MD5];
 }
 
+-(void)theme:(id)source
+{
+    global = [Globals sharedDataManager];
+    global.theme = [source objectAtIndex:0];
+}
+
+
 -(void)dataSource:(id)source
 {
     global = [Globals sharedDataManager];

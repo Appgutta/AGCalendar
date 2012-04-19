@@ -13,6 +13,7 @@
 @interface AgCalendarModule : TiModule 
 {
     id dataStore;
+    id theme;
     Globals *global;
 }
 

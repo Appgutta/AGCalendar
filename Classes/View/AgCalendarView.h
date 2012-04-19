@@ -24,7 +24,5 @@
 
 
 @property (nonatomic,retain) Globals *g;
-//- (Event *)eventAtIndexPath:(NSIndexPath *)indexPath;
-//- (id)initWithEvent:(Event *)eventt;
 
 @end

@@ -37,7 +37,7 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     // Send event details back to Titanium
     if ([self.proxy _hasListeners:@"event:clicked"]) {
         NSDictionary *eventDetails;
@@ -55,7 +55,7 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
                                     event.organizer, @"organizer",
                             nil];
         } else {
-            EKEvent *event = [[[EventKitDataSource alloc] autorelease] eventAtIndexPath:indexPath];
+            EKEvent *event = [dataSource eventAtIndexPath:indexPath];
             eventDetails = [NSDictionary dictionaryWithObjectsAndKeys: 
                                     event.title, @"title", 
                                     event.location, @"location",
@@ -85,6 +85,11 @@ static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
 - (void)showAndSelectToday:(id)args
 {
     [[self calendar] showAndSelectDate:[NSDate date]];
+}
+
+- (void)selectDate:(id)args
+{
+    [[self calendar] showAndSelectDate:[args objectAtIndex:0]];
 }
 
 -(void)setColor_:(id)color

@@ -105,6 +105,24 @@ Nothing more, nothing less..
 
 >     window.setLeftNavButton(todayButton);
 
+## `calendarView.selectDate(ids[date])`
+Programatically set active date.
+
+### Example
+
+>     var calendarView = Ti.Calendar.createView();
+>     var dateButton = Ti.UI.createButton({title: "Set custom date"});
+
+>     dateButton.addEventListener("click", function() {
+        var newDate = new Date();
+		// Add 3 days to current date
+		newDate.setDate(newDate.getDate()+3);
+		
+>		  calendarView.selectDate(newDate);
+	});
+
+>     window.setLeftNavButton(dateButton);
+
 Properties
 --------
 ## `Ti.Calendar.identifier (read-only)`

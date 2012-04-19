@@ -25,20 +25,25 @@ var calendarView = Ti.Calendar.createView({
 });
 
 // Button to hide our calendar
-var hideButton = Ti.UI.createButton({title:"Hide"});
+var options = Ti.UI.createButton({title:"Options"});
 
 // Eventlistener
-hideButton.addEventListener("click", function() {
-	if (hideButton.title == "Hide") {
-		calendarView.animate({opacity:0, duration:400}, function() {
-			calendarView.hide();
-		});
-		hideButton.title = "Show";
-	} else {
-		calendarView.show();
-		calendarView.animate({opacity:1, duration:400}); 
-		hideButton.title = "Hide";
-	}
+options.addEventListener("click", function() {
+	var dialog = Ti.UI.createOptionDialog({
+	  	options: ['Set custom date', 'Cancel'],
+	  	title: 'Calendar options',
+		cancel: 1
+	});
+	
+	dialog.addEventListener("click", function(e) {
+		if (e.index == 0) {
+			var d = new Date();
+			d.setDate(d.getDate()+3);
+			calendarView.selectDate(d);
+		}
+	});
+	
+	dialog.show();
 });
 
 // Button to select todays date
@@ -138,7 +143,7 @@ Ti.Calendar.addEvent({
 });
 
 // Add everything to our window and open it.
-window.setLeftNavButton(hideButton);
+window.setLeftNavButton(options);
 window.setRightNavButton(todayButton);
 window.add(calendarView);
 window.open({animated: false});
