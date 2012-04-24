@@ -7,7 +7,7 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Set EventKit as our datasource
-Ti.Calendar.dataSource("eventkit");
+Ti.Calendar.dataSource("coredata");
 
 // Create a window to hold our calendar
 var window = Ti.UI.createWindow({
@@ -30,9 +30,9 @@ var options = Ti.UI.createButton({title:"Options"});
 // Eventlistener
 options.addEventListener("click", function() {
 	var dialog = Ti.UI.createOptionDialog({
-	  	options: ['Set custom date', 'Cancel'],
+	  	options: ['Set custom date', 'Delete all events', 'Cancel'],
 	  	title: 'Calendar options',
-		cancel: 1
+		cancel: 2
 	});
 	
 	dialog.addEventListener("click", function(e) {
@@ -40,6 +40,15 @@ options.addEventListener("click", function() {
 			var d = new Date();
 			d.setDate(d.getDate()+3);
 			calendarView.selectDate(d);
+		} else if(e.index == 1) {
+			Ti.API.info(Ti.Calendar.ds);
+			if (Ti.Calendar.ds == "coredata") {
+				Ti.API.info("Deleting all events...");
+				Ti.Calendar.deleteAllEvents();
+			} else {
+				alert("This function is only availabe while using CoreData as your datasource.");
+				return;
+			}
 		}
 	});
 	

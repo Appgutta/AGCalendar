@@ -11,11 +11,6 @@
 #import "Event.h"
 #import "SQLDataSource.h"
 #import "EventKitDataSource.h"
-//#import <EventKit/EventKit.h>
-//#import <EventKitUI/EventKitUI.h>
-
-static id nilIsNull(id value) { return value ? value : [NSNull null]; }
-static id zeroIsNull(int value) { return value ? @"true" : @"false"; }
 
 @implementation AgCalendarView
 
