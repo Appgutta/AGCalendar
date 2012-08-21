@@ -7,7 +7,7 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Set EventKit as our datasource
-Ti.Calendar.dataSource("coredata");
+Ti.Calendar.dataSource("eventkit");
 
 // Create a window to hold our calendar
 var window = Ti.UI.createWindow({

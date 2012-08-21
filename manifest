@@ -2,11 +2,11 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.2.2
+version: 1.2.3
 description: Module for showing a monthly calendar in your application
 author: Chris Magnussen
 license: Apache 2.0
-copyright: Copyright (c) 2011 by Appgutta, DA
+copyright: Copyright (c) 2012 by Appgutta, DA
 
 
 # these should not be edited
@@ -14,4 +14,4 @@ name: agcalendar
 moduleid: ag.calendar
 guid: 261E4925-4BE0-4E88-801D-3D34FBE8FD7A
 platform: iphone
-minsdk: 1.8.0
+minsdk: 2.1.1.GA
