@@ -135,10 +135,10 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 {
     EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
 	_event.title = name;
-	_event.startDate = [[[NSDate alloc] initWithTimeInterval:1200 sinceDate:startDate] autorelease];	
+	_event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];	
 	_event.location = location;
     _event.notes = notes;
-	_event.endDate = [[[NSDate alloc] initWithTimeInterval:1200 sinceDate:endDate] autorelease];
+	_event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
 	
     BOOL isRecurrenceFrequencyExists = TRUE;
     
