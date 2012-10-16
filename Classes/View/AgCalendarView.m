@@ -73,9 +73,48 @@
     }
 }
 
--(void)showPreviousMonth{}
--(void)showFollowingMonth{}
--(void)didSelectDate:(KalDate *)date{}
+-(void)prevMonth
+{
+    if ([self.proxy _hasListeners:@"month:previous"])
+    {
+        NSLog(@"Event exists...");
+        [self.proxy fireEvent:@"month:previous" withObject:nil];
+    }
+}
+
+-(void)nextMonth
+{
+    if ([self.proxy _hasListeners:@"month:following"])
+    {
+        NSLog(@"Event exists...");
+        [self.proxy fireEvent:@"month:following" withObject:nil];
+    }
+}
+
+
+-(void)showPreviousMonth
+{
+    NSLog(@"Test");
+    if ([self.proxy _hasListeners:@"month:previous"])
+    {
+        NSLog(@"Event exists...");
+        [self.proxy fireEvent:@"month:previous" withObject:nil];
+    }
+}
+
+-(void)showFollowingMonth
+{
+    if ([self.proxy _hasListeners:@"month:following"])
+    {
+        [self.proxy fireEvent:@"month:following" withObject:nil];
+    }
+    NSLog(@"Following month...");
+}
+
+-(void)didSelectDate:(KalDate *)date
+{
+    NSLog(@"Date selected...");
+}
 
 - (void)showAndSelectToday:(id)args
 {

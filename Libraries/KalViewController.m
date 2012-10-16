@@ -8,6 +8,8 @@
 #import "KalDataSource.h"
 #import "KalDate.h"
 #import "KalPrivate.h"
+#import "AgCalendarView.h"
+#import "AgCalendarModule.h"
 
 #define PROFILER 0
 #if PROFILER
@@ -109,6 +111,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 - (void)showPreviousMonth
 {
   [self clearTable];
+  AgCalendarModule *theView = [AgCalendarModule sharedUtilities];
+  [theView prevMonth];
   [logic retreatToPreviousMonth];
   [[self calendarView] slideDown];
   [self reloadData];
@@ -117,6 +121,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 - (void)showFollowingMonth
 {
   [self clearTable];
+  AgCalendarModule *theView = [AgCalendarModule sharedUtilities];
+  [theView nextMonth];
   [logic advanceToFollowingMonth];
   [[self calendarView] slideUp];
   [self reloadData];
