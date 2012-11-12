@@ -191,6 +191,43 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             }
         }];
         
+    } else {
+        _event.title = name;
+        _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
+        _event.location = location;
+        _event.notes = notes;
+        _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
+        
+        BOOL isRecurrenceFrequencyExists = TRUE;
+        
+        EKRecurrenceFrequency recurrenceFrequency;
+        if ([[recurrence objectForKey:@"frequency"] isEqualToString: @"day"])
+            recurrenceFrequency = EKRecurrenceFrequencyDaily;
+        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"week"])
+            recurrenceFrequency = EKRecurrenceFrequencyWeekly;
+        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"month"])
+            recurrenceFrequency = EKRecurrenceFrequencyMonthly;
+        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"year"])
+            recurrenceFrequency = EKRecurrenceFrequencyYearly;
+        else
+            isRecurrenceFrequencyExists = FALSE;
+        
+        if(isRecurrenceFrequencyExists) {
+            
+            EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]] autorelease]];
+            
+            EKRecurrenceRule *recurrenceRule = [[EKRecurrenceRule alloc]
+                                                initRecurrenceWithFrequency:recurrenceFrequency
+                                                interval:[[recurrence objectForKey:@"interval"] intValue]
+                                                end:end];
+            
+            [_event addRecurrenceRule:recurrenceRule];
+            [recurrenceRule release];
+            
+        }
+        [_event setCalendar:[eventStore defaultCalendarForNewEvents]];
+        NSError *err = nil;
+        [eventStore saveEvent:_event span:EKSpanThisEvent error:&err];
     }
 }
 
