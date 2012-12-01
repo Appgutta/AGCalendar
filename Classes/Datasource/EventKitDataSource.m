@@ -107,19 +107,16 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (NSArray *)markedDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
-  // synchronous callback on the main thread
   return [[self eventsFrom:fromDate to:toDate] valueForKeyPath:@"startDate"];
 }
 
 - (void)loadItemsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-  // synchronous callback on the main thread
   [items addObjectsFromArray:[self eventsFrom:fromDate to:toDate]];
 }
 
 - (void)removeAllItems
 {
-  // synchronous callback on the main thread
   [items removeAllObjects];
 }
 
