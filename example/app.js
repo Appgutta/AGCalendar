@@ -63,22 +63,6 @@ todayButton.addEventListener("click", function() {
 	calendarView.selectTodaysDate();
 });
 
-calendarView.addEventListener('month:previous', function(e) {
-	alert("Previous month event received");
-});
-
-calendarView.addEventListener('month:following', function(e) {
-	alert("Following month event received");
-});
-
-Ti.Calendar.addEventListener('month:previous', function(e) {
-	alert("Previous month event received");
-});
-
-Ti.Calendar.addEventListener('month:following', function(e) {
-	alert("Following month event received");
-});
-
 // Now, let's create an eventlistener to get the data we want
 // from our calendar. This event will fire when a user touches
 // an event in the tableview.
