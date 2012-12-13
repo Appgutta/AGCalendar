@@ -193,7 +193,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
   
   CGRect popoverRect = CGRectMake(0, 0, self.contentSizeForViewInPopover.width, self.contentSizeForViewInPopover.height);
   CGRect windowsRect = [[UIScreen mainScreen] applicationFrame];
-  CGRect rect = CGRectMake(0, 0, MIN(popoverRect.size.width, windowsRect.size.width), MIN(popoverRect.size.height, windowsRect.size.height));
+  CGRect rect = CGRectMake(0, 0, windowsRect.size.width, windowsRect.size.height);
+  //CGRect rect = CGRectMake(0, 0, MIN(popoverRect.size.width, windowsRect.size.width), MIN(popoverRect.size.height, windowsRect.size.height));
   
   KalView *kalView = [[[KalView alloc] initWithFrame:rect delegate:self logic:logic] autorelease];
   self.view = kalView;
