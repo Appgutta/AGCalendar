@@ -57,6 +57,7 @@ This will add an event to your calendar object.
  * [date] **startDate**: Events start. (Javascript date object)
  * [date] **endDate**: Events end. (Javascript date object) 
  * [object] **recurrence**: Recurrence rule (**EventKit only**)
+ * [object] **alarm**: Event alarm (**EventKit only**)
 
 * **Core Data** (Including the above)      
 
@@ -87,6 +88,9 @@ This will add an event to your calendar object.
 	         frequency: "month", // day, week, month, year
 	         interval: 1,
 	         end: recurringEnd
+        },
+        alarm: {
+        	offset: -900 // 15 minutes before startDate
         }
     });
 
@@ -158,6 +162,43 @@ When adding this to the calendar-view you will get all event-data in a single ar
         alert(event.title+" will start "+start_date);
     });
 
+## `date:clicked`
+Know which date/tile has been touched.
+
+### Returns
+* [date] **date** (Standard dateTime format)
+
+### Example
+>     calendarView.addEventListener("date:clicked", function(e) {
+		var date_clicked = new Date(e.event.date);
+		Ti.API.info("Date clicked: "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()	+".");
+	});
+
+## `month:next`
+Fires whenever the month is changed
+
+### Returns
+* [date] **date** (Standard dateTime format) (*)
+
+(\*) Coming in 1.2.6. Currently not returning anything, just fires the event.
+
+### Example
+>     calendarView.addEventListener("month:next", function() {
+		Ti.API.info("Going to next month");
+	});
+	
+## `month:previuos`
+Fires whenever the month is changed
+
+### Returns
+* [date] **date** (Standard dateTime format) (*)
+
+(\*) Coming in 1.2.6. Currently not returning anything, just fires the event.
+
+### Example
+>     calendarView.addEventListener("month:previous", function() {
+		Ti.API.info("Going back to previous month");
+	});
 
 ## Usage
 
