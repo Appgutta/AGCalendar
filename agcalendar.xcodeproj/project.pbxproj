@@ -562,7 +562,7 @@
 					"$(TITANIUM_BASE_SDK2)/**",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				PRODUCT_NAME = AgCalendar;
 				SDKROOT = iphoneos;
