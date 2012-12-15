@@ -62,7 +62,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             if (sqlite3_open(dbpath, &db) == SQLITE_OK)
             {
                 char *errMsg;
-                const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Events (id integer PRIMARY KEY AUTOINCREMENT, title text DEFAULT empty, date_start VARCHAR(25,0), date_end VARCHAR(25,0),note text DEFAULT empty, location text DEFAULT empty, identifier VARCHAR(50,0) DEFAULT empty, type VARCHAR(20,0) DEFAULT empty, attendees text DEFAULT empty, organizer VARCHAR(50,0) DEFAULT empty);";
+                const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Events (id integer PRIMARY KEY AUTOINCREMENT, title text DEFAULT empty, date_start VARCHAR(25,0), date_end VARCHAR(25,0),note text DEFAULT empty, location text DEFAULT empty, identifier VARCHAR(50,0) DEFAULT empty, type VARCHAR(20,0) DEFAULT empty, attendees text DEFAULT empty, organizer VARCHAR(50,0) DEFAULT empty, alarm VARCHAR(20,0) DEFAULT empty);";
                 
                // const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, PHONE TEXT)";
                 
@@ -138,7 +138,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     NSDateFormatter *fmt = [[[NSDateFormatter alloc] init] autorelease];
     
 	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
-		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer from Events where date_start between ? and ?";
+		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer, alarm from Events where date_start between ? and ?";
 		sqlite3_stmt *stmt;
 		if(sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) == SQLITE_OK) {
             [fmt setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
@@ -260,7 +260,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return result;
 }
 
-- (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer
+- (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer alarm:(NSDictionary *)alarm
 {
     
     if ([self checkEvent:identifier] == NO) {

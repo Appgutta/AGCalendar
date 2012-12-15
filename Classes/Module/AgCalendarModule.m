@@ -132,12 +132,20 @@
     NSString *toDate = [dateFormat stringFromDate:endDate];
     
     NSDictionary *ev = [[[NSDictionary alloc] init] autorelease];
+    NSDictionary *alarm = [[[NSDictionary alloc] init] autorelease];
     
     if ([event objectForKey:@"recurrence"] != nil) {
         ev = [event objectForKey:@"recurrence"];
     } else {
         ev = nil;
     }
+    
+    if ([event objectForKey:@"alarm"] != nil) {
+        alarm = [event objectForKey:@"alarm"];
+    } else {
+        alarm = nil;
+    }
+
     
     global = [Globals sharedDataManager];
     dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
@@ -157,7 +165,8 @@
                     endDate:endDate
                    location:[event objectForKey:@"location"]
                       notes:[event objectForKey:@"note"]
-                 recurrence:ev];
+                 recurrence:ev
+                      alarm:alarm];
     }
     
     [dataStore release];

@@ -25,4 +25,7 @@
 
 @property (nonatomic,retain) Globals *g;
 
+-(void)showFollowingMonth:(id)args;
+-(void)showPreviousMonth:(id)args;
+
 @end

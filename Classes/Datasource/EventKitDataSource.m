@@ -97,13 +97,12 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     dispatch_async(eventStoreQueue, ^{
         NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:fromDate endDate:toDate calendars:nil];
         NSArray *matchedEvents = [eventStore eventsMatchingPredicate:predicate];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //NSLog(@"Fetched %d events in %f seconds", [matchedEvents count], -1.f * [fetchProfilerStart timeIntervalSinceNow]);
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [events removeAllObjects];
             [events addObjectsFromArray:matchedEvents];
             [delegate loadedDataSource:self];
         });
-    });
-}
+    });}
 
 - (NSArray *)markedDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
@@ -140,91 +139,66 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return YES;
 }
 
-- (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence
+- (void)createEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence alarm:(NSDictionary *)alarm
 {
     EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
+    _event.title = name;
+    _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
+    _event.location = location;
+    _event.notes = notes;
+    _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
+    
+    //NSInteger *offset = [[alarm objectForKey:@"offset"];
+    EKAlarm *al = [EKAlarm alarmWithRelativeOffset:[[alarm objectForKey:@"offset"] intValue]];
+    _event.alarms = [NSArray arrayWithObject:al];
+    
+    BOOL isRecurrenceFrequencyExists = TRUE;
+    
+    EKRecurrenceFrequency recurrenceFrequency;
+    if ([[recurrence objectForKey:@"frequency"] isEqualToString: @"day"])
+        recurrenceFrequency = EKRecurrenceFrequencyDaily;
+    else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"week"])
+        recurrenceFrequency = EKRecurrenceFrequencyWeekly;
+    else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"month"])
+        recurrenceFrequency = EKRecurrenceFrequencyMonthly;
+    else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"year"])
+        recurrenceFrequency = EKRecurrenceFrequencyYearly;
+    else
+        isRecurrenceFrequencyExists = FALSE;
+    
+    if(isRecurrenceFrequencyExists) {
+        
+        EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]] autorelease]];
+        
+        EKRecurrenceRule *recurrenceRule = [[EKRecurrenceRule alloc]
+                                            initRecurrenceWithFrequency:recurrenceFrequency
+                                            interval:[[recurrence objectForKey:@"interval"] intValue]
+                                            end:end];
+        
+        [_event addRecurrenceRule:recurrenceRule];
+        [recurrenceRule release];
+        
+    }
+    [_event setCalendar:[eventStore defaultCalendarForNewEvents]];
+    NSError *err = nil;
+    [eventStore saveEvent:_event span:EKSpanThisEvent error:&err];
+
+}
+
+
+- (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence alarm:(NSDictionary *)alarm
+{
     if([self checkIsDeviceVersionHigherThanRequiredVersion:@"6.0"]) {
         [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-            if (granted){
-                _event.title = name;
-                _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
-                _event.location = location;
-                _event.notes = notes;
-                _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
-                
-                BOOL isRecurrenceFrequencyExists = TRUE;
-                
-                EKRecurrenceFrequency recurrenceFrequency;
-                if ([[recurrence objectForKey:@"frequency"] isEqualToString: @"day"])
-                    recurrenceFrequency = EKRecurrenceFrequencyDaily;
-                else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"week"])
-                    recurrenceFrequency = EKRecurrenceFrequencyWeekly;
-                else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"month"])
-                    recurrenceFrequency = EKRecurrenceFrequencyMonthly;
-                else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"year"])
-                    recurrenceFrequency = EKRecurrenceFrequencyYearly;
-                else
-                    isRecurrenceFrequencyExists = FALSE;
-                
-                if(isRecurrenceFrequencyExists) {
-                    
-                    EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]] autorelease]];
-                    
-                    EKRecurrenceRule *recurrenceRule = [[EKRecurrenceRule alloc]
-                                                        initRecurrenceWithFrequency:recurrenceFrequency
-                                                        interval:[[recurrence objectForKey:@"interval"] intValue]
-                                                        end:end];
-                    
-                    [_event addRecurrenceRule:recurrenceRule];
-                    [recurrenceRule release];
-                    
-                }    
-                [_event setCalendar:[eventStore defaultCalendarForNewEvents]];
-                NSError *err = nil; 
-                [eventStore saveEvent:_event span:EKSpanThisEvent error:&err];
+            if (granted) {
+                [self createEvent:name startDate:startDate endDate:endDate location:location notes:notes recurrence:recurrence alarm:alarm];
             } else {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Calendar" message:@"You didnt allow access to your calendar." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil, nil];
                 [alert show];
             }
         }];
-        
     } else {
-        _event.title = name;
-        _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
-        _event.location = location;
-        _event.notes = notes;
-        _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
-        
-        BOOL isRecurrenceFrequencyExists = TRUE;
-        
-        EKRecurrenceFrequency recurrenceFrequency;
-        if ([[recurrence objectForKey:@"frequency"] isEqualToString: @"day"])
-            recurrenceFrequency = EKRecurrenceFrequencyDaily;
-        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"week"])
-            recurrenceFrequency = EKRecurrenceFrequencyWeekly;
-        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"month"])
-            recurrenceFrequency = EKRecurrenceFrequencyMonthly;
-        else if([[recurrence objectForKey:@"frequency"] isEqualToString: @"year"])
-            recurrenceFrequency = EKRecurrenceFrequencyYearly;
-        else
-            isRecurrenceFrequencyExists = FALSE;
-        
-        if(isRecurrenceFrequencyExists) {
-            
-            EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]] autorelease]];
-            
-            EKRecurrenceRule *recurrenceRule = [[EKRecurrenceRule alloc]
-                                                initRecurrenceWithFrequency:recurrenceFrequency
-                                                interval:[[recurrence objectForKey:@"interval"] intValue]
-                                                end:end];
-            
-            [_event addRecurrenceRule:recurrenceRule];
-            [recurrenceRule release];
-            
-        }
-        [_event setCalendar:[eventStore defaultCalendarForNewEvents]];
-        NSError *err = nil;
-        [eventStore saveEvent:_event span:EKSpanThisEvent error:&err];
+        [self createEvent:name startDate:startDate endDate:endDate location:location notes:notes recurrence:recurrence alarm:alarm];
     }
 }
 

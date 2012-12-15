@@ -102,6 +102,9 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
   self.selectedDate = [date NSDate];
   NSDate *from = [[date NSDate] cc_dateByMovingToBeginningOfDay];
   NSDate *to = [[date NSDate] cc_dateByMovingToEndOfDay];
+  if ([self.delegate respondsToSelector:@selector(didSelectDate:)]) {
+    [self.delegate performSelector:@selector(didSelectDate:) withObject:to];
+  }
   [self clearTable];
   [dataSource loadItemsFromDate:from toDate:to];
   [tableView reloadData];
@@ -111,21 +114,23 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 - (void)showPreviousMonth
 {
   [self clearTable];
-  AgCalendarModule *theView = [AgCalendarModule sharedUtilities];
-  [theView prevMonth];
   [logic retreatToPreviousMonth];
   [[self calendarView] slideDown];
   [self reloadData];
+  if ([self.delegate respondsToSelector:@selector(showPreviousMonth:)]) {
+    [self.delegate performSelector:@selector(showPreviousMonth:) withObject:nil];
+  }
 }
 
 - (void)showFollowingMonth
 {
   [self clearTable];
-  AgCalendarModule *theView = [AgCalendarModule sharedUtilities];
-  [theView nextMonth];
   [logic advanceToFollowingMonth];
   [[self calendarView] slideUp];
   [self reloadData];
+  if ([self.delegate respondsToSelector:@selector(showFollowingMonth:)]) {
+    [self.delegate performSelector:@selector(showFollowingMonth:) withObject:nil];
+  }
 }
 
 // -----------------------------------------
@@ -139,7 +144,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [dates replaceObjectAtIndex:i withObject:[KalDate dateFromNSDate:[dates objectAtIndex:i]]];
   
   [[self calendarView] markTilesForDates:dates];
-  [self didSelectDate:self.calendarView.selectedDate];
+  //[self didSelectDate:self.calendarView.selectedDate];
+  [[self calendarView] selectDate:[KalDate dateFromNSDate:self.selectedDate]];
 }
 
 // ---------------------------------------

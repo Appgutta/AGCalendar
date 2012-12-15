@@ -46,7 +46,7 @@ options.addEventListener("click", function() {
 				Ti.API.info("Deleting all events...");
 				Ti.Calendar.deleteAllEvents();
 			} else {
-				alert("This function is only availabe while using CoreData as your datasource.");
+				alert("This function is only available while using CoreData as your datasource.");
 				return;
 			}
 		}
@@ -55,12 +55,28 @@ options.addEventListener("click", function() {
 	dialog.show();
 });
 
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+
 // Button to select todays date
 var todayButton = Ti.UI.createButton({title:"Today"});
 
 // Eventlistener
 todayButton.addEventListener("click", function() {
 	calendarView.selectTodaysDate();
+});
+
+calendarView.addEventListener("date:clicked", function(e) {
+	var date_clicked = new Date(e.event.date);
+	Ti.API.info("Date clicked: "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()+".");
+});
+
+calendarView.addEventListener("month:next", function() {
+	Ti.API.info("Moving to next month");
+});
+
+calendarView.addEventListener("month:previous", function() {
+	Ti.API.info("Moving to previous month");
 });
 
 // Now, let's create an eventlistener to get the data we want
@@ -148,6 +164,9 @@ Ti.Calendar.addEvent({
 		frequency: "day", // day, week, month, year
 		interval: 2,
 		end: recurringEnd2 
+	},
+	alarm: {
+		offset: -900 // 900 seconds = 15 minutes
 	}
 });
 

@@ -57,6 +57,7 @@
                                     event.startDate, @"startDate", 
                                     event.endDate, @"endDate",
                                     event.notes, @"notes",
+                                    [[event.alarms objectAtIndex:0] relativeOffset], @"alarmOffset",
                             nil];
         }
         
@@ -73,47 +74,31 @@
     }
 }
 
--(void)prevMonth
+
+-(void)showPreviousMonth:(id)args
 {
     if ([self.proxy _hasListeners:@"month:previous"])
     {
-        NSLog(@"Event exists...");
         [self.proxy fireEvent:@"month:previous" withObject:nil];
     }
 }
 
--(void)nextMonth
+-(void)showFollowingMonth:(id)args
 {
-    if ([self.proxy _hasListeners:@"month:following"])
+    if ([self.proxy _hasListeners:@"month:next"])
     {
-        NSLog(@"Event exists...");
-        [self.proxy fireEvent:@"month:following" withObject:nil];
+        [self.proxy fireEvent:@"month:next" withObject:nil];
     }
 }
 
-
--(void)showPreviousMonth
+-(void)didSelectDate:(NSDate *)date
 {
-    NSLog(@"Test");
-    if ([self.proxy _hasListeners:@"month:previous"])
+    if ([self.proxy _hasListeners:@"date:clicked"])
     {
-        NSLog(@"Event exists...");
-        [self.proxy fireEvent:@"month:previous" withObject:nil];
+        NSDictionary *returnDate = [NSDictionary dictionaryWithObjectsAndKeys:date, @"date", nil];
+        NSDictionary *dateSelected = [NSDictionary dictionaryWithObjectsAndKeys: returnDate, @"event", nil];
+        [self.proxy fireEvent:@"date:clicked" withObject:dateSelected];
     }
-}
-
--(void)showFollowingMonth
-{
-    if ([self.proxy _hasListeners:@"month:following"])
-    {
-        [self.proxy fireEvent:@"month:following" withObject:nil];
-    }
-    NSLog(@"Following month...");
-}
-
--(void)didSelectDate:(KalDate *)date
-{
-    NSLog(@"Date selected...");
 }
 
 - (void)showAndSelectToday:(id)args
@@ -125,6 +110,8 @@
 {
     [[self calendar] showAndSelectDate:[args objectAtIndex:0]];
 }
+
+
 
 -(void)setColor_:(id)color
 {
