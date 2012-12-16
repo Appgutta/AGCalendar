@@ -17,9 +17,4 @@
     Globals *global;
 }
 
--(void)prevMonth;
--(void)nextMonth;
-
-+(AgCalendarModule *)sharedUtilities;
-
 @end

@@ -117,14 +117,58 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     static NSString *identifier = @"Calendar";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        Event *event = [self eventAtIndexPath:indexPath];
+        
+        cell.textLabel.text = event.name;
+        cell.detailTextLabel.text = event.location;
+        cell.indentationLevel = 4;
+        
+        
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *startComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.startDate];
+        NSDateComponents *endComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.endDate];
+        NSInteger hour_start = [startComp hour];
+        NSInteger minute_start = [startComp minute];
+        NSInteger hour_end = [endComp hour];
+        NSInteger minute_end = [endComp minute];
+        
+        UILabel *time_start, *time_end;
+        
+        time_start = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 5.0, 35.0, 15.0)];
+        time_start.tag = 1;
+        time_start.textColor = [UIColor darkGrayColor];
+        time_start.textAlignment = UITextAlignmentLeft;
+        time_start.font = [UIFont boldSystemFontOfSize:13.0];
+        time_start.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+        time_start.backgroundColor = [UIColor clearColor];
+        time_start.highlightedTextColor = [UIColor whiteColor];
+        [cell.contentView addSubview:time_start];
+        
+        time_end = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 20.0, 35.0, 25.0)];
+        time_end.tag = 2;
+        time_end.textColor = [UIColor darkGrayColor];
+        time_end.textAlignment = UITextAlignmentLeft;
+        time_end.font = [UIFont boldSystemFontOfSize:13.0];
+        time_end.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+        time_end.backgroundColor = [UIColor clearColor];
+        time_end.highlightedTextColor = [UIColor whiteColor];
+        [cell.contentView addSubview:time_end];
+        
+        time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
+        time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
+        
+        [time_start release];
+        [time_end release];
+
     }
     
-    Event *event = [self eventAtIndexPath:indexPath];
+    /*Event *event = [self eventAtIndexPath:indexPath];
     //cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"flags/%@.gif", event.location]];
-    cell.textLabel.text = event.name;
+    cell.textLabel.text = event.name;*/
     return cell;
 }
 
@@ -260,7 +304,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return result;
 }
 
-- (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer alarm:(NSDictionary *)alarm
+- (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer
 {
     
     if ([self checkEvent:identifier] == NO) {

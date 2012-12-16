@@ -151,6 +151,7 @@ When adding this to the calendar-view you will get all event-data in a single ar
 * [string] **organizer** (*)
 * [date] **startDate** (Standard dateTime format)
 * [date] **endDate** (Standard dateTime format)
+* [float] **alarmOffset** (Seconds) (EventKit only)
 
 (\*) Only available when using Core Data as the data source.   
 (\**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.

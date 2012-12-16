@@ -70,18 +70,63 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  static NSString *identifier = @"MyCell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-  if (!cell) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
-  }
-
-  EKEvent *event = [self eventAtIndexPath:indexPath];
-  cell.textLabel.text = event.title;
-  return cell;
+    static NSString *identifier = @"events";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        /*cell.imageView.contentMode = UIViewContentModeScaleAspectFill;*/
+        
+        EKEvent *event = [self eventAtIndexPath:indexPath];
+        cell.textLabel.text = event.title;
+        cell.detailTextLabel.text = event.location;
+        cell.indentationLevel = 4;
+        
+        
+        if (event.allDay) {
+            // Localization
+        } else {
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            NSDateComponents *startComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.startDate];
+            NSDateComponents *endComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.endDate];
+            NSInteger hour_start = [startComp hour];
+            NSInteger minute_start = [startComp minute];
+            NSInteger hour_end = [endComp hour];
+            NSInteger minute_end = [endComp minute];
+            
+            UILabel *time_start, *time_end;
+            
+            time_start = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 5.0, 35.0, 15.0)];
+            time_start.tag = 1;
+            time_start.textColor = [UIColor darkGrayColor];
+            time_start.textAlignment = UITextAlignmentLeft;
+            time_start.font = [UIFont boldSystemFontOfSize:13.0];
+            time_start.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+            time_start.backgroundColor = [UIColor clearColor];
+            time_start.highlightedTextColor = [UIColor whiteColor];
+            [cell.contentView addSubview:time_start];
+            
+            time_end = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 20.0, 35.0, 25.0)];
+            time_end.tag = 2;
+            time_end.textColor = [UIColor darkGrayColor];
+            time_end.textAlignment = UITextAlignmentLeft;
+            time_end.font = [UIFont boldSystemFontOfSize:13.0];
+            time_end.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+            time_end.backgroundColor = [UIColor clearColor];
+            time_end.highlightedTextColor = [UIColor whiteColor];
+            [cell.contentView addSubview:time_end];
+            
+            time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
+            time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
+            
+            [time_start release];
+            [time_end release];
+        }
+        
+    }
+    
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

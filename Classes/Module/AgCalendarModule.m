@@ -90,32 +90,6 @@
 	}
 }
 
--(void)prevMonth
-{
-    if ([super _hasListeners:@"month:previous"])
-    {
-        NSLog(@"Event exists...");
-        [super fireEvent:@"month:previous" withObject:nil];
-    }
-}
-
--(void)nextMonth
-{
-    if ([super _hasListeners:@"month:following"])
-    {
-        NSLog(@"Event exists...");
-        [super fireEvent:@"month:following" withObject:nil];
-    }
-}
-
-+(AgCalendarModule *)sharedUtilities
-{
-    static AgCalendarModule* _sharedUtilities;
-    if (!_sharedUtilities)
-        _sharedUtilities = [AgCalendarModule alloc];
-    return _sharedUtilities;
-}
-
 #pragma Public APIs
 // TODO
 // 1. Add a check to every item. ENSURE_ARG_TYPE(arg,NSType)

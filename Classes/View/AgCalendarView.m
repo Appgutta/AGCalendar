@@ -51,13 +51,14 @@
                             nil];
         } else {
             EKEvent *event = [dataSource eventAtIndexPath:indexPath];
+            NSString *alarmOffset = [NSString stringWithFormat:@"%f", [[event.alarms objectAtIndex:0] relativeOffset]];
             eventDetails = [NSDictionary dictionaryWithObjectsAndKeys: 
                                     event.title, @"title", 
                                     event.location, @"location",
                                     event.startDate, @"startDate", 
                                     event.endDate, @"endDate",
                                     event.notes, @"notes",
-                                    [[event.alarms objectAtIndex:0] relativeOffset], @"alarmOffset",
+                                    alarmOffset, @"alarmOffset",
                             nil];
         }
         

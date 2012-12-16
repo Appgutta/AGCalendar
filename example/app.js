@@ -7,7 +7,7 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Set EventKit as our datasource
-Ti.Calendar.dataSource("eventkit");
+Ti.Calendar.dataSource("coredata");
 
 // Create a window to hold our calendar
 var window = Ti.UI.createWindow({
@@ -114,6 +114,9 @@ Ti.Calendar.addEvent({
 	endDate: endDate,
 	location: "At home",
 	note: "A note",
+	alarm: {
+		offset: -900
+	},
 	// CoreData only
 	// Read the docs
 	identifier: Ti.Calendar.identifier,
@@ -139,6 +142,7 @@ recurringEvent.location = "At home";
 recurringEvent.note = "A note";
 // EventKit only
 recurringEvent.recurrence = { frequency: "month", interval: 1, end: recurringEnd };
+recurringEvent.alarm = { offset: -900 };
 
 // CoreData only
 recurringEvent.identifier = Ti.Calendar.identifier;
