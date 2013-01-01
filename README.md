@@ -1,5 +1,19 @@
 AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom" />
 ============
+
+## Changelog
+**Jan 2, 2013**  
+* Added eventlistener "longpress"  
+* [Added VoiceOver/Accessibility support][]  
+* Updated docs    
+
+**Dec 16, 2012**  
+* Added more details in the UITableView, including start date, end date and a subtitle using the events location)  
+* alarmOffset now returned to each event having an alarm set
+
+
+For a more detailed changelog, check the [Commit History][]
+
 ## Description
 AGCalendar enables you to access the native calendar on your iPhone, iPad or iPod. EventKit and Core Data are both supported data sources. This enables you to switch between iCal and your custom calendar. Some more information below.
 
@@ -175,6 +189,30 @@ Know which date/tile has been touched.
 		Ti.API.info("Date clicked: "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()	+".");
 	});
 
+## `date:longpress`
+Fires whenever a datetile is pressed 0.5 seconds or more. Could be used to allow users to add events to the calendar by longpressing the day of month they want an event to be added. 
+
+Requested by Digitalico - [Issue #22][]
+
+### Returns
+* [date] **date** (Standard dateTime format)
+
+### Example
+>     calendarView.addEventListener("date:longpress", function(e) {
+		var date_clicked = new Date(e.event.date);
+		var dialog = Ti.UI.createAlertDialog({
+	    	message: "Would you like to add a new event on "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()+". ?",
+	    	buttonNames: ['Yeah!', 'Cancel'],
+			cancel: 1,
+	    	title: 'New event'
+		});
+		dialog.addEventListener('click', function(e){
+			Ti.API.info(e.index == 0 ? "Add event functionality..." : "No event added");
+		});
+		dialog.show();
+	});
+
+
 ## `month:next`
 Fires whenever the month is changed
 
@@ -214,8 +252,14 @@ Chris Magnussen for Appgutta, DA.
 
 License
 ------
-Copyright(c) 2012 by Appgutta, DA. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
+Copyright(c) 2013 Appgutta, DA. Please see the LICENSE file included in the distribution for further details.  
+
+This module uses [klazuka][]'s calendar component. 
 
 
 [Twitter]: http://twitter.com/crmag
 [Appgutta.no]: http://www.appgutta.no
+[Issue #22]: https://github.com/Appgutta/AGCalendar/issues/22
+[Added VoiceOver/Accessibility support]: https://github.com/klazuka/Kal/commit/50b02e2d916343e46272dd8720a32fd5de615892
+[klazuka]: https://github.com/klazuka/Kal/
+[Commit History]: https://github.com/Appgutta/AGCalendar/commits/master

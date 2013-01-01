@@ -50,7 +50,7 @@
                                     event.organizer, @"organizer",
                             nil];
         } else {
-            EKEvent *event = [dataSource eventAtIndexPath:indexPath];
+            EKEvent *event = (EKEvent *) [dataSource eventAtIndexPath:indexPath];
             NSString *alarmOffset = [NSString stringWithFormat:@"%f", [[event.alarms objectAtIndex:0] relativeOffset]];
             eventDetails = [NSDictionary dictionaryWithObjectsAndKeys: 
                                     event.title, @"title", 
@@ -75,6 +75,33 @@
     }
 }
 
+-(void)showPreviousMonth
+{
+    if ([self.proxy _hasListeners:@"month:previous"])
+    {
+        [self.proxy fireEvent:@"month:previous" withObject:nil];
+    }
+}
+
+-(void)showFollowingMonth
+{
+    if ([self.proxy _hasListeners:@"month:next"])
+    {
+        [self.proxy fireEvent:@"month:next" withObject:nil];
+    }
+}
+
+
+// Fires when there's a long press on the date tile.
+-(void)didSelectDateLong:(NSDate *)date
+{
+    if ([self.proxy _hasListeners:@"date:longpress"])
+    {
+        NSDictionary *returnDate = [NSDictionary dictionaryWithObjectsAndKeys:date, @"date", nil];
+        NSDictionary *dateSelected = [NSDictionary dictionaryWithObjectsAndKeys: returnDate, @"event", nil];
+        [self.proxy fireEvent:@"date:longpress" withObject:dateSelected];
+    }
+}
 
 -(void)showPreviousMonth:(id)args
 {

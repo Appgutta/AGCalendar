@@ -115,6 +115,7 @@ static const CGFloat kMonthLabelHeight = 17.f;
                                                  kChangeMonthButtonWidth,
                                                  kChangeMonthButtonHeight);
     UIButton *previousMonthButton = [[UIButton alloc] initWithFrame:previousMonthButtonFrame];
+    [previousMonthButton setAccessibilityLabel:NSLocalizedString(@"Previous month", nil)];
     [previousMonthButton setImage:[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_left_arrow.png"]] forState:UIControlStateNormal];
     previousMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     previousMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -143,6 +144,7 @@ static const CGFloat kMonthLabelHeight = 17.f;
                                              kChangeMonthButtonWidth,
                                              kChangeMonthButtonHeight);
     UIButton *nextMonthButton = [[UIButton alloc] initWithFrame:nextMonthButtonFrame];
+    [nextMonthButton setAccessibilityLabel:NSLocalizedString(@"Next month", nil)];
     [nextMonthButton setImage:[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_right_arrow.png"]] forState:UIControlStateNormal];
     nextMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     nextMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -152,6 +154,7 @@ static const CGFloat kMonthLabelHeight = 17.f;
     
     // Add column labels for each weekday (adjusting based on the current locale's first weekday)
     NSArray *weekdayNames = [[[[NSDateFormatter alloc] init] autorelease] shortWeekdaySymbols];
+    NSArray *fullWeekdayNames = [[[[NSDateFormatter alloc] init] autorelease] standaloneWeekdaySymbols];
     NSUInteger firstWeekday = [[NSCalendar currentCalendar] firstWeekday];
     NSUInteger i = firstWeekday - 1;
     CGSize tileSize = [KalGridView	tileSize];
@@ -168,6 +171,7 @@ static const CGFloat kMonthLabelHeight = 17.f;
         weekdayLabel.shadowColor = [UIColor whiteColor];
         weekdayLabel.shadowOffset = CGSizeMake(0.f, 1.f);
         weekdayLabel.text = [weekdayNames objectAtIndex:i];
+        [weekdayLabel setAccessibilityLabel:[fullWeekdayNames objectAtIndex:i]];
         [headerView addSubview:weekdayLabel];
         [weekdayLabel release];
     }

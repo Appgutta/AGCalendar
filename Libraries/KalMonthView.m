@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (c) 2009 Keith Lazuka
  * License: http://www.opensource.org/licenses/mit-license.html
  */
@@ -19,40 +19,42 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-  if ((self = [super initWithFrame:frame])) {
-    self.opaque = NO;
-    self.clipsToBounds = YES;
-      CGSize tileSize = [KalGridView tileSize];
-    for (int i=0; i<6; i++) {
-      for (int j=0; j<7; j++) {
-       CGRect r = CGRectMake(j*tileSize.width, i*tileSize.height, tileSize.width, tileSize.height);
-        [self addSubview:[[[KalTileView alloc] initWithFrame:r] autorelease]];
-      }
+    if ((self = [super initWithFrame:frame])) {
+        tileAccessibilityFormatter = [[NSDateFormatter alloc] init];
+        [tileAccessibilityFormatter setDateFormat:@"EEEE, MMMM d"];
+        self.opaque = NO;
+        self.clipsToBounds = YES;
+        CGSize tileSize = [KalGridView tileSize];
+        for (int i=0; i<6; i++) {
+            for (int j=0; j<7; j++) {
+                CGRect r = CGRectMake(j*tileSize.width, i*tileSize.height, tileSize.width, tileSize.height);
+                [self addSubview:[[[KalTileView alloc] initWithFrame:r] autorelease]];
+            }
+        }
     }
-  }
-  return self;
+    return self;
 }
 
 - (void)showDates:(NSArray *)mainDates leadingAdjacentDates:(NSArray *)leadingAdjacentDates trailingAdjacentDates:(NSArray *)trailingAdjacentDates
 {
-  int tileNum = 0;
-  NSArray *dates[] = { leadingAdjacentDates, mainDates, trailingAdjacentDates };
-  
-  for (int i=0; i<3; i++) {
-    for (KalDate *d in dates[i]) {
-      KalTileView *tile = [self.subviews objectAtIndex:tileNum];
-      [tile resetState];
-      tile.date = d;
-      tile.type = dates[i] != mainDates
-                    ? KalTileTypeAdjacent
-                    : [d isToday] ? KalTileTypeToday : KalTileTypeRegular;
-      tileNum++;
+    int tileNum = 0;
+    NSArray *dates[] = { leadingAdjacentDates, mainDates, trailingAdjacentDates };
+    
+    for (int i=0; i<3; i++) {
+        for (KalDate *d in dates[i]) {
+            KalTileView *tile = [self.subviews objectAtIndex:tileNum];
+            [tile resetState];
+            tile.date = d;
+            tile.type = dates[i] != mainDates
+            ? KalTileTypeAdjacent
+            : [d isToday] ? KalTileTypeToday : KalTileTypeRegular;
+            tileNum++;
+        }
     }
-  }
-  
-  numWeeks = ceilf(tileNum / 7.f);
-  [self sizeToFit];
-  [self setNeedsDisplay];
+    
+    numWeeks = ceilf(tileNum / 7.f);
+    [self sizeToFit];
+    [self setNeedsDisplay];
 }
 
 -(NSString*)getPathToModuleAsset:(NSString*) fileName
@@ -70,47 +72,67 @@
 - (void)drawRect:(CGRect)rect
 {
     CGSize tileSize = [KalGridView tileSize];
-  CGContextRef ctx = UIGraphicsGetCurrentContext();
-  CGContextDrawTiledImage(ctx, (CGRect){CGPointZero,tileSize}, [[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_tile.png"]] CGImage]);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextDrawTiledImage(ctx, (CGRect){CGPointZero,tileSize}, [[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_tile.png"]] CGImage]);
 }
 
 - (KalTileView *)firstTileOfMonth
 {
-  KalTileView *tile = nil;
-  for (KalTileView *t in self.subviews) {
-    if (!t.belongsToAdjacentMonth) {
-      tile = t;
-      break;
+    KalTileView *tile = nil;
+    for (KalTileView *t in self.subviews) {
+        if (!t.belongsToAdjacentMonth) {
+            tile = t;
+            break;
+        }
     }
-  }
-  
-  return tile;
+    
+    return tile;
 }
 
 - (KalTileView *)tileForDate:(KalDate *)date
 {
-  KalTileView *tile = nil;
-  for (KalTileView *t in self.subviews) {
-    if ([t.date isEqual:date]) {
-      tile = t;
-      break;
+    KalTileView *tile = nil;
+    for (KalTileView *t in self.subviews) {
+        if ([t.date isEqual:date]) {
+            tile = t;
+            break;
+        }
     }
-  }
-  NSAssert1(tile != nil, @"Failed to find corresponding tile for date %@", date);
-  
-  return tile;
+    NSAssert1(tile != nil, @"Failed to find corresponding tile for date %@", date);
+    
+    return tile;
 }
 
 - (void)sizeToFit
 {
     CGSize tileSize = [KalGridView  tileSize];
-  self.height = 1.f + tileSize.height * numWeeks;
+    self.height = 1.f + tileSize.height * numWeeks;
 }
 
 - (void)markTilesForDates:(NSArray *)dates
 {
-  for (KalTileView *tile in self.subviews)
-    tile.marked = [dates containsObject:tile.date];
+    for (KalTileView *tile in self.subviews)
+    {
+        tile.marked = [dates containsObject:tile.date];
+        NSString *dayString = [tileAccessibilityFormatter stringFromDate:[tile.date NSDate]];
+        if (dayString) {
+            NSMutableString *helperText = [[[NSMutableString alloc] initWithCapacity:128] autorelease];
+            if ([tile.date isToday])
+                [helperText appendFormat:@"%@ ", NSLocalizedString(@"Today", @"Accessibility text for a day tile that represents today")];
+            [helperText appendString:dayString];
+            if (tile.marked)
+                [helperText appendFormat:@". %@", NSLocalizedString(@"Marked", @"Accessibility text for a day tile which is marked with a small dot")];
+            [tile setAccessibilityLabel:helperText];
+        }
+    }
+}
+
+#pragma mark -
+
+- (void)dealloc
+{
+    [tileAccessibilityFormatter release];
+    [super dealloc];
 }
 
 @end

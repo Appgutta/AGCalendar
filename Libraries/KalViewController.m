@@ -111,6 +111,14 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
   [tableView flashScrollIndicators];
 }
 
+- (void)didSelectDateLong:(KalDate *)date
+{
+  if ([self.delegate respondsToSelector:@selector(didSelectDateLong:)]) {
+    NSDate *to = [[date NSDate] cc_dateByMovingToEndOfDay];
+    [self.delegate performSelector:@selector(didSelectDateLong:) withObject:to];
+  }
+}
+
 - (void)showPreviousMonth
 {
   [self clearTable];

@@ -71,6 +71,21 @@ calendarView.addEventListener("date:clicked", function(e) {
 	Ti.API.info("Date clicked: "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()+".");
 });
 
+calendarView.addEventListener("date:longpress", function(e) {
+	var date_clicked = new Date(e.event.date);
+	var dialog = Ti.UI.createAlertDialog({
+	    message: "Would you like to add a new event on "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()+". ?",
+	    buttonNames: ['Yeah!', 'Cancel'],
+		cancel: 1,
+	    title: 'New event'
+	});
+	
+	dialog.addEventListener('click', function(e){
+		Ti.API.info(e.index == 0 ? "Add event functionality..." : "No event added");
+	});
+	dialog.show();
+});
+
 calendarView.addEventListener("month:next", function() {
 	Ti.API.info("Moving to next month");
 });
