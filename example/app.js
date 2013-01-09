@@ -7,7 +7,7 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Set EventKit as our datasource
-Ti.Calendar.dataSource("coredata");
+Ti.Calendar.dataSource("eventkit");
 
 // Create a window to hold our calendar
 var window = Ti.UI.createWindow({
@@ -80,8 +80,23 @@ calendarView.addEventListener("date:longpress", function(e) {
 	    title: 'New event'
 	});
 	
+	var endDate = date_clicked;
+	endDate.setHours(endDate.getHours()+3);
+	
 	dialog.addEventListener('click', function(e){
-		Ti.API.info(e.index == 0 ? "Add event functionality..." : "No event added");
+		if (e.index == 0) {
+			Ti.Calendar.addEvent({
+				title: "Added event",
+				startDate: date_clicked,
+				endDate: endDate,
+				location: "At home",
+				identifier: Ti.Calendar.identifier
+			});
+			
+			setTimeout(function() {
+				calendarView.selectTodaysDate();
+			},1000);
+		}
 	});
 	dialog.show();
 });

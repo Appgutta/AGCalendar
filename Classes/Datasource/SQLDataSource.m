@@ -62,7 +62,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             if (sqlite3_open(dbpath, &db) == SQLITE_OK)
             {
                 char *errMsg;
-                const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Events (id integer PRIMARY KEY AUTOINCREMENT, title text DEFAULT empty, date_start VARCHAR(25,0), date_end VARCHAR(25,0),note text DEFAULT empty, location text DEFAULT empty, identifier VARCHAR(50,0) DEFAULT empty, type VARCHAR(20,0) DEFAULT empty, attendees text DEFAULT empty, organizer VARCHAR(50,0) DEFAULT empty, alarm VARCHAR(20,0) DEFAULT empty);";
+                const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Events (id integer PRIMARY KEY AUTOINCREMENT, title text DEFAULT empty, date_start VARCHAR(25,0), date_end VARCHAR(25,0),note text DEFAULT empty, location text DEFAULT empty, identifier VARCHAR(50,0) DEFAULT empty, type VARCHAR(20,0) DEFAULT empty, attendees text DEFAULT empty, organizer VARCHAR(50,0) DEFAULT empty);";
                 
                // const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, PHONE TEXT)";
                 
@@ -114,57 +114,55 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"Calendar";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier] autorelease];
-        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
-        Event *event = [self eventAtIndexPath:indexPath];
-        
-        cell.textLabel.text = event.name;
-        cell.detailTextLabel.text = event.location;
-        cell.indentationLevel = 4;
-        
-        
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *startComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.startDate];
-        NSDateComponents *endComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.endDate];
-        NSInteger hour_start = [startComp hour];
-        NSInteger minute_start = [startComp minute];
-        NSInteger hour_end = [endComp hour];
-        NSInteger minute_end = [endComp minute];
-        
-        UILabel *time_start, *time_end;
-        
-        time_start = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 5.0, 35.0, 15.0)];
-        time_start.tag = 1;
-        time_start.textColor = [UIColor darkGrayColor];
-        time_start.textAlignment = UITextAlignmentLeft;
-        time_start.font = [UIFont boldSystemFontOfSize:13.0];
-        time_start.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-        time_start.backgroundColor = [UIColor clearColor];
-        time_start.highlightedTextColor = [UIColor whiteColor];
-        [cell.contentView addSubview:time_start];
-        
-        time_end = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 20.0, 35.0, 25.0)];
-        time_end.tag = 2;
-        time_end.textColor = [UIColor darkGrayColor];
-        time_end.textAlignment = UITextAlignmentLeft;
-        time_end.font = [UIFont boldSystemFontOfSize:13.0];
-        time_end.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-        time_end.backgroundColor = [UIColor clearColor];
-        time_end.highlightedTextColor = [UIColor whiteColor];
-        [cell.contentView addSubview:time_end];
-        
-        time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
-        time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
-        
-        [time_start release];
-        [time_end release];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
+    if (cell == nil){
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
     }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+    Event *event = [self eventAtIndexPath:indexPath];
+        
+    cell.textLabel.text = event.name;
+    cell.detailTextLabel.text = event.location;
+    cell.indentationLevel = 4;
+        
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *startComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.startDate];
+    NSDateComponents *endComp = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:event.endDate];
+    NSInteger hour_start = [startComp hour];
+    NSInteger minute_start = [startComp minute];
+    NSInteger hour_end = [endComp hour];
+    NSInteger minute_end = [endComp minute];
+    
+    UILabel *time_start, *time_end;
+        
+    time_start = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 5.0, 35.0, 15.0)];
+    time_start.tag = 1;
+    time_start.textColor = [UIColor darkGrayColor];
+    time_start.textAlignment = UITextAlignmentLeft;
+    time_start.font = [UIFont boldSystemFontOfSize:13.0];
+    time_start.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+    time_start.backgroundColor = [UIColor clearColor];
+    time_start.highlightedTextColor = [UIColor whiteColor];
+    [cell.contentView addSubview:time_start];
+        
+    time_end = [[UILabel alloc] initWithFrame:CGRectMake(27.0, 20.0, 35.0, 25.0)];
+    time_end.tag = 2;
+    time_end.textColor = [UIColor darkGrayColor];
+    time_end.textAlignment = UITextAlignmentLeft;
+    time_end.font = [UIFont boldSystemFontOfSize:13.0];
+    time_end.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+    time_end.backgroundColor = [UIColor clearColor];
+    time_end.highlightedTextColor = [UIColor whiteColor];
+    [cell.contentView addSubview:time_end];
+        
+    time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
+    time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
+        
+    [time_start release];
+    [time_end release];
     
     /*Event *event = [self eventAtIndexPath:indexPath];
     //cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"flags/%@.gif", event.location]];
@@ -182,7 +180,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     NSDateFormatter *fmt = [[[NSDateFormatter alloc] init] autorelease];
     
 	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
-		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer, alarm from Events where date_start between ? and ?";
+		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer from Events where date_start between ? and ?";
 		sqlite3_stmt *stmt;
 		if(sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) == SQLITE_OK) {
             [fmt setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
@@ -208,10 +206,10 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     [delegate loadedDataSource:self];
 }
 
--(bool)checkEvent:(NSString *)identifier
+-(BOOL)checkEvent:(NSString *)identifier
 {
     const char *dbpath = [databasePath UTF8String];
-    BOOL result;
+    BOOL result = NO;
     sqlite3_stmt    *statement;
     
     if (sqlite3_open(dbpath, &db) == SQLITE_OK)
@@ -238,7 +236,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 -(BOOL)deleteEvent:(NSString *)identifier
 {
-    BOOL result;
+    BOOL result = NO;
     if ([self checkEvent:identifier] == YES) {
         sqlite3_stmt *statement;
     

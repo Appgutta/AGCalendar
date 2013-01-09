@@ -152,8 +152,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [dates replaceObjectAtIndex:i withObject:[KalDate dateFromNSDate:[dates objectAtIndex:i]]];
   
   [[self calendarView] markTilesForDates:dates];
-  //[self didSelectDate:self.calendarView.selectedDate];
-  [[self calendarView] selectDate:[KalDate dateFromNSDate:self.selectedDate]];
+  [self didSelectDate:self.calendarView.selectedDate];
+  //[[self calendarView] selectDate:[KalDate dateFromNSDate:self.selectedDate]];
 }
 
 // ---------------------------------------

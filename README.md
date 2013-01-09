@@ -1,8 +1,10 @@
 AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom" />
 ============
 
-
 ## Changelog
+**Jan 9, 2013**		
+* Fix for [#23][]	
+
 **Jan 2, 2013**  
 * Added eventlistener "longpress"  
 * [Added VoiceOver/Accessibility support][]  
@@ -264,3 +266,4 @@ This module uses [klazuka][]'s calendar component.
 [Added VoiceOver/Accessibility support]: https://github.com/klazuka/Kal/commit/50b02e2d916343e46272dd8720a32fd5de615892
 [klazuka]: https://github.com/klazuka/Kal/
 [Commit History]: https://github.com/Appgutta/AGCalendar/commits/master
+[#23]: http://github.com/Appgutta/AGCalendar/issues/23

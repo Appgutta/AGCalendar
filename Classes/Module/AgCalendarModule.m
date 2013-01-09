@@ -91,8 +91,6 @@
 }
 
 #pragma Public APIs
-// TODO
-// 1. Add a check to every item. ENSURE_ARG_TYPE(arg,NSType)
 -(void)addEvent:(id)event
 {
     ENSURE_UI_THREAD_1_ARG(event);
