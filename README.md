@@ -1,6 +1,8 @@
 AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom" />
 ============
 
+[![endorse](http://api.coderwall.com/chrisrm/endorsecount.png)](http://coderwall.com/chrisrm)
+
 ## Changelog
 **Jan 9, 2013**		
 * Fix for [#23][]	
