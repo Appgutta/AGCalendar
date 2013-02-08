@@ -73,7 +73,7 @@ options.addEventListener("click", function() {
 			}
 			
 			/* Delete an event
-			var Event = Ti.Calendar.fetchEvent();
+			var Event = Ti.Calendar.fetchEvent(Identifier);
 			Ti.API.info(JSON.stringify(Event));
 			*/
 		}
