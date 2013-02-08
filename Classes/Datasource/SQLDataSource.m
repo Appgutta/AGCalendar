@@ -45,15 +45,9 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
         NSString *docsDir;
         NSArray *dirPaths;
         
-        // Get the documents directory
-        dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        
-        docsDir = [dirPaths objectAtIndex:0];
-        
-        // Build the path to the database file
         databasePath = [self dbPath:@"events.db"];
         
-        NSFileManager *filemgr = [NSFileManager defaultManager];
+        NSFileManager *filemgr = [[NSFileManager defaultManager] retain];
         
         if ([filemgr fileExistsAtPath: databasePath ] == NO)
         {
@@ -63,9 +57,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             {
                 char *errMsg;
                 const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Events (id integer PRIMARY KEY AUTOINCREMENT, title text DEFAULT empty, date_start VARCHAR(25,0), date_end VARCHAR(25,0),note text DEFAULT empty, location text DEFAULT empty, identifier VARCHAR(50,0) DEFAULT empty, type VARCHAR(20,0) DEFAULT empty, attendees text DEFAULT empty, organizer VARCHAR(50,0) DEFAULT empty);";
-                
-               // const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, PHONE TEXT)";
-                
+                                
                 if (sqlite3_exec(db, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
                 {
                     NSLog(@"Failed to create instance");
@@ -104,7 +96,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         Event *ev = [self eventAtIndexPath:indexPath];
-        [self deleteEvent:ev.identifier];
+        [self removeEvent:ev.identifier];
         [events removeObjectAtIndex:indexPath.row];
         [items removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
@@ -206,16 +198,98 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     [delegate loadedDataSource:self];
 }
 
+-(id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate {
+    NSDateFormatter *fmt = [[[NSDateFormatter alloc] init] autorelease];
+    eventList = [[NSMutableArray alloc] init];
+    
+	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
+		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer from Events where date_start between ? and ?";
+		sqlite3_stmt *stmt;
+		if(sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) == SQLITE_OK) {
+            [fmt setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            sqlite3_bind_text(stmt, 1, [[fmt stringFromDate:fromDate] UTF8String], -1, SQLITE_STATIC);
+            sqlite3_bind_text(stmt, 2, [[fmt stringFromDate:toDate] UTF8String], -1, SQLITE_STATIC);
+            [fmt setDateFormat:@"yyyy-MM-dd HH:mm"];
+			while(sqlite3_step(stmt) == SQLITE_ROW) {
+                NSString *title = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
+				NSString *location = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
+                NSString *eventType = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+                NSString *identifier = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
+                NSString *note = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 4)];
+                NSString *date_from = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 5)];
+                NSString *date_to = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 6)];
+                NSString *attendees = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 7)];
+                NSString *organizer = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 8)];
+                [eventList addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                     title, @"title",
+                                                     location, @"location",
+                                                     eventType, @"type",
+                                                     identifier, @"identifier",
+                                                     note, @"note",
+                                                     date_from, @"startDate",
+                                                     date_to, @"endDate",
+                                                     attendees, @"attendees",
+                                                     organizer, @"organizer",
+                                                     nil]];
+			}
+		}
+		sqlite3_finalize(stmt);
+	}
+	sqlite3_close(db);
+    
+    return eventList;
+}
+
+-(id)getEvent:(NSString *)identifier
+{
+    eventList = [[NSMutableArray alloc] init];
+    
+	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
+		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer from Events where identifier=?";
+		sqlite3_stmt *stmt;
+		if(sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) == SQLITE_OK) {
+            sqlite3_bind_text(stmt, 1, [identifier UTF8String], -1, SQLITE_STATIC);
+			while(sqlite3_step(stmt) == SQLITE_ROW) {
+                NSString *title = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
+				NSString *location = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
+                NSString *eventType = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+                NSString *identifier = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
+                NSString *note = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 4)];
+                NSString *date_from = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 5)];
+                NSString *date_to = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 6)];
+                NSString *attendees = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 7)];
+                NSString *organizer = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 8)];
+                [eventList addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                                      title, @"title",
+                                      location, @"location",
+                                      eventType, @"type",
+                                      identifier, @"identifier",
+                                      note, @"note",
+                                      date_from, @"startDate",
+                                      date_to, @"endDate",
+                                      attendees, @"attendees",
+                                      organizer, @"organizer",
+                                      nil]];
+			}
+            sqlite3_finalize(stmt);
+		}
+        sqlite3_close(db);
+    }
+    
+    return eventList;
+
+}
+
 -(BOOL)checkEvent:(NSString *)identifier
 {
     const char *dbpath = [databasePath UTF8String];
     BOOL result = NO;
     sqlite3_stmt    *statement;
-    
+ 
     if (sqlite3_open(dbpath, &db) == SQLITE_OK)
     {
         NSString *querySQL = [NSString stringWithFormat: @"SELECT title FROM Events WHERE identifier=\"%@\"", identifier];
-        
+ 
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(db, query_stmt, -1, &statement, NULL) == SQLITE_OK)
@@ -234,7 +308,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return result;
 }
 
--(BOOL)deleteEvent:(NSString *)identifier
+-(void)removeEvent:(NSString *)identifier
 {
     BOOL result = NO;
     if ([self checkEvent:identifier] == YES) {
@@ -244,7 +318,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     
         if (sqlite3_open(dbpath, &db) == SQLITE_OK)
         {
-            NSLog(@"DELETE FROM Events WHERE identifier='%@'", identifier);
             NSString *querySQL = [NSString stringWithFormat: @"DELETE FROM Events WHERE identifier=\"%@\"", identifier];
         
             const char *query_stmt = [querySQL UTF8String];
@@ -266,8 +339,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     } else {
         NSLog(@"[INFO] No event found with identifier %@", identifier);
     }
-    
-    return result;
 }
 
 -(BOOL)deleteAllEvents
@@ -363,6 +434,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (void)dealloc 
 {
+    [eventList release];
     [events release];
     [items release];
     [super dealloc];

@@ -6,6 +6,7 @@
 //  Copyright 2011 Appgutta DA. All rights reserved.
 //
 #import "TiModule.h"
+#import <EventKit/EventKit.h>
 
 @class Event;
 @class Globals;

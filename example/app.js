@@ -7,7 +7,7 @@
 Titanium.Calendar = Ti.Calendar = require('ag.calendar');
 
 // Set EventKit as our datasource
-Ti.Calendar.dataSource("eventkit");
+Ti.Calendar.dataSource("coredata");
 
 // Create a window to hold our calendar
 var window = Ti.UI.createWindow({
@@ -30,9 +30,9 @@ var options = Ti.UI.createButton({title:"Options"});
 // Eventlistener
 options.addEventListener("click", function() {
 	var dialog = Ti.UI.createOptionDialog({
-	  	options: ['Set custom date', 'Delete all events', 'Cancel'],
+	  	options: ['Set custom date', 'Delete all events', 'Check calendar access', 'Get event list', 'Cancel'],
 	  	title: 'Calendar options',
-		cancel: 2
+		cancel: 4
 	});
 	
 	dialog.addEventListener("click", function(e) {
@@ -41,7 +41,7 @@ options.addEventListener("click", function() {
 			d.setDate(d.getDate()+3);
 			calendarView.selectDate(d);
 		} else if(e.index == 1) {
-			Ti.API.info(Ti.Calendar.ds);
+			Ti.API.info("Datastore: "+Ti.Calendar.ds);
 			if (Ti.Calendar.ds == "coredata") {
 				Ti.API.info("Deleting all events...");
 				Ti.Calendar.deleteAllEvents();
@@ -49,6 +49,33 @@ options.addEventListener("click", function() {
 				alert("This function is only available while using CoreData as your datasource.");
 				return;
 			}
+		} else if(e.index == 2) {
+			if (Ti.Calendar.hasCalendarAccess == true) {
+				alert("Yep, I have access to the calendar!");
+			} else {
+				alert("Nope, no access to users calendar.");
+			}
+		} else if(e.index == 3) {
+			var from = new Date();
+			from.setMinutes(from.getMinutes()-10);
+			
+			var Events = Ti.Calendar.fetchEvents({
+				fromDate: from,
+				toDate: new Date()
+			});
+			
+			if (Events) {
+				for (var i=0;i<Events.length;i++) {
+					Ti.API.info("Title: "+Events[i].title);
+				}
+			} else {
+				Ti.API.info("No events found");
+			}
+			
+			/* Delete an event
+			var Event = Ti.Calendar.fetchEvent();
+			Ti.API.info(JSON.stringify(Event));
+			*/
 		}
 	});
 	
@@ -138,7 +165,7 @@ var endDate = new Date();
 endDate.setHours(endDate.getHours()+3);
 
 // Add event to our calendar.
-Ti.Calendar.addEvent({
+/*Ti.Calendar.addEvent({
 	title: "Starting and ending today",
 	startDate: new Date(),
 	endDate: endDate,
@@ -153,7 +180,7 @@ Ti.Calendar.addEvent({
 	type:"private",
 	attendees: "Bill Gates, Mark Zuckerberg",
 	organizer: "Chris"
-});
+});*/
 
 // Event 2: An event recurring every month for one year.
 // First, create a recurring end-date.
@@ -188,7 +215,7 @@ var recurringEnd2 = new Date();
 recurringEnd2.setMonth(recurringEnd2.getMonth()+1);
 
 // The event
-Ti.Calendar.addEvent({
+/*Ti.Calendar.addEvent({
 	title: "Every other day for one month",
 	startDate: new Date(),
 	endDate: endDate,
@@ -202,7 +229,7 @@ Ti.Calendar.addEvent({
 	alarm: {
 		offset: -900 // 900 seconds = 15 minutes
 	}
-});
+});*/
 
 // Add everything to our window and open it.
 window.setLeftNavButton(options);

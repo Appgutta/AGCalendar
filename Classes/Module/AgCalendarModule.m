@@ -103,20 +103,11 @@
     NSString *fromDate = [dateFormat stringFromDate:startDate];
     NSString *toDate = [dateFormat stringFromDate:endDate];
     
-    NSDictionary *ev = [[[NSDictionary alloc] init] autorelease];
-    NSDictionary *alarm = [[[NSDictionary alloc] init] autorelease];
+    NSDictionary *ev;
+    NSDictionary *alarm;
     
-    if ([event objectForKey:@"recurrence"] != nil) {
-        ev = [event objectForKey:@"recurrence"];
-    } else {
-        ev = nil;
-    }
-    
-    if ([event objectForKey:@"alarm"] != nil) {
-        alarm = [event objectForKey:@"alarm"];
-    } else {
-        alarm = nil;
-    }
+    ev = ([event objectForKey:@"recurrence"] != nil) ? [event objectForKey:@"recurrence"] : nil;
+    alarm = ([event objectForKey:@"alarm"] != nil) ? [event objectForKey:@"alarm"] : nil;
 
     
     global = [Globals sharedDataManager];
@@ -143,6 +134,41 @@
     
     [dataStore release];
     [dateFormat release];
+}
+
+-(id)fetchEvents:(id)args
+{
+    if (args != nil) {
+        ENSURE_SINGLE_ARG(args,NSDictionary);
+    }
+    
+    NSDate *fromDate = ([args objectForKey:@"fromDate"] != nil) ? [args objectForKey:@"fromDate"] : [NSDate distantPast];
+    NSDate *toDate = ([args objectForKey:@"toDate"] != nil) ? [args objectForKey:@"toDate"] : [NSDate distantFuture];
+    
+    global = [Globals sharedDataManager];
+    dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
+    
+    return [dataStore getEvents:fromDate to:toDate];
+    
+    [dataStore release];
+}
+
+-(id)fetchEvent:(id)identifier
+{
+    global = [Globals sharedDataManager];
+    dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
+    return [dataStore getEvent:[identifier objectAtIndex:0]];
+    
+    [dataStore release];
+}
+
+-(BOOL)deleteEvent:(id)identifier
+{
+    global = [Globals sharedDataManager];
+    dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
+    return [dataStore deleteEvent:[identifier objectAtIndex:0]];
+    
+    [dataStore release];
 }
 
 -(void)deleteAllEvents:(id)event
@@ -187,26 +213,27 @@
     return global.dbSource;
 }
 
+-(id)hasCalendarAccess
+{
+    global = [Globals sharedDataManager];
+    if ([global.dbSource isEqualToString:@"eventkit"]) {
+        EKAuthorizationStatus calendarAccess = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+        if (calendarAccess == EKAuthorizationStatusDenied ||
+            calendarAccess == EKAuthorizationStatusNotDetermined ||
+            calendarAccess == EKAuthorizationStatusRestricted)
+        {
+            return [NSNumber numberWithBool:NO];
+        } else {
+            return [NSNumber numberWithBool:YES];
+        }
+    }
+
+    return [NSNumber numberWithBool:YES];
+}
+
 -(NSString*)dataSource
 {
     return global.dbSource;
-}
-
--(id)example:(id)args
-{
-	// example method
-	return @"hellosss world";
-}
-
--(id)exampleProp
-{
-	// example property getter
-	return @"hello world";
-}
-
--(void)exampleProp:(id)value
-{
-	// example property setter
 }
 
 @end

@@ -4,6 +4,13 @@ AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.pn
 [![endorse](http://api.coderwall.com/chrisrm/endorsecount.png)](http://coderwall.com/chrisrm)
 
 ## Changelog
+**Feb 8, 2013**		
+* Added `Ti.Calendar.fetchEvents(object[startDate, endDate])`    
+* Added `Ti.Calendar.fetchEvent(ids[identifier])`    
+* Added `Ti.Calendar.deleteEvent(ids[identifier])`    
+* Added [QA][] page for various questions and answers      
+* Added `Ti.Calendar.hasCalendarAccess`
+
 **Jan 9, 2013**		
 * Fix for [#23][]	
 
@@ -35,7 +42,7 @@ To access this module from JavaScript, you would do the following:
 
 >     Titanium.Calendar = Ti.Calendar = require("ag.calendar");
 
-Functions
+Methods
 --------
 ## `Ti.Calendar.dataSource(ids[string])`
 This will set the data source you want to use.    
@@ -146,6 +153,74 @@ Programatically set active date.
 
 >     window.setLeftNavButton(dateButton);
 
+## `Ti.Calendar.fetchEvents(object)`
+Fetches an array containing events between dates. Useful if you dont want to use the Calendar View.
+
+### Parameters
+ * [date] **fromDate**: From date (Javascript date object) (*)
+ * [date] **toDate**: To date (Javascript date object) (*)
+
+\* Optional. If no from or toDate is present, [distantPast][] and [distantFuture][] is used.
+ 
+### Example
+>	  var from = new Date();
+>	  from.setDate(from.getDate()-1);
+>	  
+>     var Events = Ti.Calendar.getEvents({
+>         fromDate: from,
+>         toDate: new Date()
+>     });
+>     
+	for (var i=0;i<Events.length;i++) {
+		Ti.API.info(Events[i].title);
+	}
+
+### Returns
+* [string] **title**
+* [string] **type** (*)
+* [string] **note** (*)
+* [string] **location**
+* [string] **attendees** (*)
+* [string] **description** (*)
+* [string] **identifier** (**)
+* [string] **organizer** (*)
+* [date] **startDate** (Standard dateTime format)
+* [date] **endDate** (Standard dateTime format)
+* [float] **alarmOffset** (Seconds) (EventKit only)
+
+(*) Only available when using Core Data as the data source.    
+(**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.
+
+
+## `Ti.Calendar.fetchEvent(ids[identifier])`
+Fetches details of a given event, based on the identifier.
+ 
+### Example
+>	  var Event = Ti.Calendar.fetchEvent("baedff11f74a256bfbca4336e38c6483");
+	Ti.API.info(JSON.stringify(Event));
+
+### Returns
+* [string] **title**
+* [string] **type** (*)
+* [string] **note** (*)
+* [string] **location**
+* [string] **attendees** (*)
+* [string] **description** (*)
+* [string] **identifier** (**)
+* [string] **organizer** (*)
+* [date] **startDate** (Standard dateTime format)
+* [date] **endDate** (Standard dateTime format)
+* [float] **alarmOffset** (Seconds) (EventKit only)
+
+(*) Only available when using Core Data as the data source.    
+(**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.
+
+## `Ti.Calendar.deleteEvent(ids[identifier])`
+Programmatically delete event by identifier.
+ 
+### Example
+>	  Ti.Calendar.deleteEvent("baedff11f74a256bfbca4336e38c6483");
+
 Properties
 --------
 ## `Ti.Calendar.identifier (read-only)`
@@ -154,6 +229,16 @@ This can be used for the ***identifier***-parameter in the *createView()*-instan
 
 ### Returns
 * [string] MD5 sum of globallyUniqueString
+
+## `Ti.Calendar.hasCalendarAccess (read-only)`
+
+Used to check whether the user has granted access to the built-in calendar(EventKit)    
+_Added in version 1.2.8_
+
+### Returns
+* [boolean] true or false
+
+
 
 Events
 -----
@@ -269,3 +354,6 @@ This module uses [klazuka][]'s calendar component.
 [klazuka]: https://github.com/klazuka/Kal/
 [Commit History]: https://github.com/Appgutta/AGCalendar/commits/master
 [#23]: http://github.com/Appgutta/AGCalendar/issues/23
+[QA]: https://github.com/Appgutta/AGCalendar/wiki/QA
+[distantFuture]: http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/occ/clm/NSDate/distantFuture
+[distantPast]: http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/occ/clm/NSDate/distantPast

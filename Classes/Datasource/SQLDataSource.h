@@ -17,6 +17,7 @@
     NSMutableArray *items;
     NSMutableArray *events;
     NSString *databasePath;
+    NSMutableArray *eventList;
     Globals *glob;
     sqlite3 *db;
 }
@@ -24,7 +25,9 @@
 + (SQLDataSource *)dataSource;
 - (Event *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (void)addEvent:(NSString *)name startDate:(NSString *)startDate endDate:(NSString *)endDate location:(NSString *)location attendees:(NSString *)attendees note:(NSString *)note identifier:(NSString *)identifier type:(NSString *)type organizer:(NSString *)organizer;
-- (BOOL)deleteEvent:(NSString *)identifier;
 - (BOOL)deleteAllEvents;
+- (id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate;
+- (id)getEvent:(NSString *)identifier;
+- (void)removeEvent:(NSString *)identifier;
 
 @end

@@ -20,7 +20,7 @@ static Globals *sharedGlobalDataManager = nil;
 {
     @synchronized(self) {
         if (sharedGlobalDataManager == nil) {
-            [[self alloc] init];
+            [[[self alloc] init] autorelease];
         }
     }
     return sharedGlobalDataManager;

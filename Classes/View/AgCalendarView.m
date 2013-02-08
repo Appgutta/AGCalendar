@@ -32,8 +32,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // Send event details back to Titanium
     if ([self.proxy _hasListeners:@"event:clicked"]) {
         NSDictionary *eventDetails;
         if ([g.dbSource isEqualToString:@"coredata"]) {

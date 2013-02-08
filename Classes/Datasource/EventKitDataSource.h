@@ -14,6 +14,7 @@
     NSMutableArray *items; 
     NSMutableArray *events;
     EKEventStore *eventStore;
+    NSMutableArray *eventList;
     Globals *glob;
     dispatch_queue_t eventStoreQueue;
 }
@@ -21,6 +22,8 @@
 + (EventKitDataSource *)dataSource;
 - (EKEvent *)eventAtIndexPath:(NSIndexPath *)indexPath;
 - (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence alarm:(NSDictionary *)alarm;
-- (BOOL)deleteEvent:(id)args;
+- (id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate;
+- (id)getEvent:(NSString *)identifier;
+- (void)removeEvent:(NSString *)identifier;
 
 @end

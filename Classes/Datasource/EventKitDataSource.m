@@ -176,16 +176,11 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 #pragma mark -
 
--(BOOL)deleteEvent:(id)args
-{
-   // EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
-    return YES;
-}
-
 - (void)createEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence alarm:(NSDictionary *)alarm
 {
     EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
     _event.title = name;
+    /* TODO Fix date */
     _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
     _event.location = location;
     _event.notes = notes;
@@ -228,6 +223,63 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 }
 
+-(id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate
+{
+    eventList = [[NSMutableArray alloc] init];
+    
+    NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:fromDate endDate:toDate calendars:nil];
+    NSArray *evts = [eventStore eventsMatchingPredicate:predicate];
+    
+    for (EKEvent *event in evts)
+    {
+        if (IsDateBetweenInclusive(event.startDate, fromDate, toDate)) {
+            NSString *alarmOffset = [NSString stringWithFormat:@"%f", [[event.alarms objectAtIndex:0] relativeOffset]];
+            [eventList addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                                  event.title, @"title",
+                                  event.location, @"location",
+                                  alarmOffset, @"alarmOffset",
+                                  event.startDate, @"startDate",
+                                  event.endDate, @"endDate",
+                                  event.attendees, @"attendees",
+                                  event.organizer, @"organizer",
+                                  event.recurrenceRules, @"recurrenceRules",
+                                  event.eventIdentifier, @"identifier",
+                                  nil]];
+        }
+    }
+    
+    return eventList;
+}
+
+-(id)getEvent:(NSString *)identifier
+{
+    eventList = [[NSMutableArray alloc] init];
+    EKEvent *event = [eventStore eventWithIdentifier:identifier];
+    
+    NSString *alarmOffset = [NSString stringWithFormat:@"%f", [[event.alarms objectAtIndex:0] relativeOffset]];
+    [eventList addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                         event.title, @"title",
+                         event.location, @"location",
+                         alarmOffset, @"alarmOffset",
+                         event.startDate, @"startDate",
+                         event.endDate, @"endDate",
+                         event.attendees, @"attendees",
+                         event.organizer, @"organizer",
+                         event.recurrenceRules, @"recurrenceRules",
+                         event.eventIdentifier, @"identifier",
+                         nil]];
+    
+    return eventList;
+}
+
+-(void)removeEvent:(NSString *)identifier
+{
+    EKEvent *event = [eventStore eventWithIdentifier:identifier];
+    NSError *error = nil;
+    [eventStore removeEvent:event span: EKSpanFutureEvents error:&error];
+    //[items removeObject:event];
+}
+
 
 - (void)addEvent:(NSString *)name startDate:(NSDate *)startDate endDate:(NSDate *)endDate location:(NSString *)location notes:(NSString *)notes recurrence:(NSDictionary *)recurrence alarm:(NSDictionary *)alarm
 {
@@ -236,7 +288,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             if (granted) {
                 [self createEvent:name startDate:startDate endDate:endDate location:location notes:notes recurrence:recurrence alarm:alarm];
             } else {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Calendar" message:@"You didnt allow access to your calendar." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil, nil];
+                UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Calendar" message:@"You didnt allow access to your calendar." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil, nil] autorelease];
                 [alert show];
             }
         }];
