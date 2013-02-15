@@ -1,35 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>AGCalendar by Appgutta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>AGCalendar by Appgutta</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>AGCalendar</h1>
-        <p>Calendar module for Titanium</p>
+        <h2>Calendar module for Titanium</h2>
+        <a href="https://github.com/Appgutta/AGCalendar" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/Appgutta/AGCalendar">View the Project on GitHub <small>Appgutta/AGCalendar</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/Appgutta/AGCalendar/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Appgutta/AGCalendar/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Appgutta/AGCalendar">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom">
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom">
 </h1>
+
+<p><a href="http://coderwall.com/chrisrm"><img src="http://api.coderwall.com/chrisrm/endorsecount.png" alt="endorse"></a></p>
+
+<h2>Changelog</h2>
+
+<p><strong>Feb 8, 2013</strong>     </p>
+
+<ul>
+<li>Added <code>Ti.Calendar.fetchEvents(object[startDate, endDate])</code><br>
+</li>
+<li>Added <code>Ti.Calendar.fetchEvent(ids[identifier])</code><br>
+</li>
+<li>Added <code>Ti.Calendar.deleteEvent(ids[identifier])</code><br>
+</li>
+<li>Added <a href="https://github.com/Appgutta/AGCalendar/wiki/QA">QA</a> page for various questions and answers<br>
+</li>
+<li>Added <code>Ti.Calendar.hasCalendarAccess</code>
+</li>
+</ul><p><strong>Jan 9, 2013</strong>     </p>
+
+<ul>
+<li>Fix for <a href="http://github.com/Appgutta/AGCalendar/issues/23">#23</a><br>
+</li>
+</ul><p><strong>Jan 2, 2013</strong>  </p>
+
+<ul>
+<li>Added eventlistener "longpress"<br>
+</li>
+<li>
+<a href="https://github.com/klazuka/Kal/commit/50b02e2d916343e46272dd8720a32fd5de615892">Added VoiceOver/Accessibility support</a><br>
+</li>
+<li>Updated docs<br>
+</li>
+</ul><p><strong>Dec 16, 2012</strong>  </p>
+
+<ul>
+<li>Added more details in the UITableView, including start date, end date and a subtitle using the events location)<br>
+</li>
+<li>alarmOffset now returned to each event having an alarm set</li>
+</ul><p>For a more detailed changelog, check the <a href="https://github.com/Appgutta/AGCalendar/commits/master">Commit History</a></p>
 
 <h2>Description</h2>
 
@@ -53,7 +93,7 @@
 </code></pre>
 </blockquote>
 
-<h2>Functions</h2>
+<h2>Methods</h2>
 
 <h2><code>Ti.Calendar.dataSource(ids[string])</code></h2>
 
@@ -198,6 +238,95 @@ window.setLeftNavButton(dateButton);
 </code></pre>
 </blockquote>
 
+<h2><code>Ti.Calendar.fetchEvents(object)</code></h2>
+
+<p>Fetches an array containing events between dates. Useful if you dont want to use the Calendar View.</p>
+
+<h3>Parameters</h3>
+
+<ul>
+<li>[date] <strong>fromDate</strong>: From date (Javascript date object) (*)</li>
+<li>[date] <strong>toDate</strong>: To date (Javascript date object) (*)</li>
+</ul><p>* Optional. If no from or toDate is present, <a href="http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/occ/clm/NSDate/distantPast">distantPast</a> and <a href="http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html#//apple_ref/occ/clm/NSDate/distantFuture">distantFuture</a> is used.</p>
+
+<h3>Example</h3>
+
+<blockquote>
+<pre><code>var from = new Date();
+from.setDate(from.getDate()-1);
+
+var Events = Ti.Calendar.getEvents({
+    fromDate: from,
+    toDate: new Date()
+});
+
+for (var i=0;i&lt;Events.length;i++) {
+    Ti.API.info(Events[i].title);
+}
+</code></pre>
+</blockquote>
+
+<h3>Returns</h3>
+
+<ul>
+<li>[string] <strong>title</strong>
+</li>
+<li>[string] <strong>type</strong> (*)</li>
+<li>[string] <strong>note</strong> (*)</li>
+<li>[string] <strong>location</strong>
+</li>
+<li>[string] <strong>attendees</strong> (*)</li>
+<li>[string] <strong>description</strong> (*)</li>
+<li>[string] <strong>identifier</strong> (**)</li>
+<li>[string] <strong>organizer</strong> (*)</li>
+<li>[date] <strong>startDate</strong> (Standard dateTime format)</li>
+<li>[date] <strong>endDate</strong> (Standard dateTime format)</li>
+<li>[float] <strong>alarmOffset</strong> (Seconds) (EventKit only)</li>
+</ul><p>(*) Only available when using Core Data as the data source.<br>
+(**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.</p>
+
+<h2><code>Ti.Calendar.fetchEvent(ids[identifier])</code></h2>
+
+<p>Fetches details of a given event, based on the identifier.</p>
+
+<h3>Example</h3>
+
+<blockquote>
+<pre><code>var Event = Ti.Calendar.fetchEvent("baedff11f74a256bfbca4336e38c6483");
+Ti.API.info(JSON.stringify(Event));
+</code></pre>
+</blockquote>
+
+<h3>Returns</h3>
+
+<ul>
+<li>[string] <strong>title</strong>
+</li>
+<li>[string] <strong>type</strong> (*)</li>
+<li>[string] <strong>note</strong> (*)</li>
+<li>[string] <strong>location</strong>
+</li>
+<li>[string] <strong>attendees</strong> (*)</li>
+<li>[string] <strong>description</strong> (*)</li>
+<li>[string] <strong>identifier</strong> (**)</li>
+<li>[string] <strong>organizer</strong> (*)</li>
+<li>[date] <strong>startDate</strong> (Standard dateTime format)</li>
+<li>[date] <strong>endDate</strong> (Standard dateTime format)</li>
+<li>[float] <strong>alarmOffset</strong> (Seconds) (EventKit only)</li>
+</ul><p>(*) Only available when using Core Data as the data source.<br>
+(**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.</p>
+
+<h2><code>Ti.Calendar.deleteEvent(ids[identifier])</code></h2>
+
+<p>Programmatically delete event by identifier.</p>
+
+<h3>Example</h3>
+
+<blockquote>
+<pre><code>Ti.Calendar.deleteEvent("baedff11f74a256bfbca4336e38c6483");
+</code></pre>
+</blockquote>
+
 <h2>Properties</h2>
 
 <h2><code>Ti.Calendar.identifier (read-only)</code></h2>
@@ -208,6 +337,14 @@ window.setLeftNavButton(dateButton);
 
 <ul>
 <li>[string] MD5 sum of globallyUniqueString</li>
+</ul><h2><code>Ti.Calendar.hasCalendarAccess (read-only)</code></h2>
+
+<p>Used to check whether the user has granted access to the built-in calendar(EventKit)<br><em>Added in version 1.2.8</em></p>
+
+<h3>Returns</h3>
+
+<ul>
+<li>[boolean] true or false</li>
 </ul><h2>Events</h2>
 
 <h2><code>event:clicked</code></h2>
@@ -228,6 +365,7 @@ window.setLeftNavButton(dateButton);
 <li>[string] <strong>organizer</strong> (*)</li>
 <li>[date] <strong>startDate</strong> (Standard dateTime format)</li>
 <li>[date] <strong>endDate</strong> (Standard dateTime format)</li>
+<li>[float] <strong>alarmOffset</strong> (Seconds) (EventKit only)</li>
 </ul><p>(*) Only available when using Core Data as the data source.<br>
 (**) When using Core Data your custom identifier is returned, else the auto generated eventIdentifier in EventKit is returned.</p>
 
@@ -256,6 +394,35 @@ window.setLeftNavButton(dateButton);
 <pre><code>calendarView.addEventListener("date:clicked", function(e) {
     var date_clicked = new Date(e.event.date);
     Ti.API.info("Date clicked: "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate() +".");
+});
+</code></pre>
+</blockquote>
+
+<h2><code>date:longpress</code></h2>
+
+<p>Fires whenever a datetile is pressed 0.5 seconds or more. Could be used to allow users to add events to the calendar by longpressing the day of month they want an event to be added. </p>
+
+<p>Requested by Digitalico - <a href="https://github.com/Appgutta/AGCalendar/issues/22">Issue #22</a></p>
+
+<h3>Returns</h3>
+
+<ul>
+<li>[date] <strong>date</strong> (Standard dateTime format)</li>
+</ul><h3>Example</h3>
+
+<blockquote>
+<pre><code>calendarView.addEventListener("date:longpress", function(e) {
+    var date_clicked = new Date(e.event.date);
+    var dialog = Ti.UI.createAlertDialog({
+        message: "Would you like to add a new event on "+monthNames[date_clicked.getMonth()]+" "+date_clicked.getDate()+". ?",
+        buttonNames: ['Yeah!', 'Cancel'],
+        cancel: 1,
+        title: 'New event'
+    });
+    dialog.addEventListener('click', function(e){
+        Ti.API.info(e.index == 0 ? "Add event functionality..." : "No event added");
+    });
+    dialog.show();
 });
 </code></pre>
 </blockquote>
@@ -311,14 +478,28 @@ window.setLeftNavButton(dateButton);
 <li><a href="http://www.appgutta.no">Appgutta.no</a></li>
 </ul><h2>License</h2>
 
-<p>Copyright(c) 2012 by Appgutta, DA. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Appgutta">Appgutta</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<p>Copyright(c) 2013 Appgutta, DA. Please see the LICENSE file included in the distribution for further details.  </p>
+
+<p>This module uses <a href="https://github.com/klazuka/Kal/">klazuka</a>'s calendar component. </p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Appgutta/AGCalendar/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Appgutta/AGCalendar/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Appgutta/AGCalendar"></a> is maintained by <a href="https://github.com/Appgutta">Appgutta</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+  
   </body>
 </html>
