@@ -11,7 +11,7 @@
 #import "KalDate.h"
 #import "KalPrivate.h"
 
-// extern const CGSize kTileSize;
+extern const CGSize kTileSize;
 
 @implementation KalMonthView
 
@@ -20,14 +20,11 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) {
-        tileAccessibilityFormatter = [[NSDateFormatter alloc] init];
-        [tileAccessibilityFormatter setDateFormat:@"EEEE, MMMM d"];
         self.opaque = NO;
         self.clipsToBounds = YES;
-        CGSize tileSize = [KalGridView tileSize];
         for (int i=0; i<6; i++) {
             for (int j=0; j<7; j++) {
-                CGRect r = CGRectMake(j*tileSize.width, i*tileSize.height, tileSize.width, tileSize.height);
+                CGRect r = CGRectMake(j*kTileSize.width, i*kTileSize.height, kTileSize.width, kTileSize.height);
                 [self addSubview:[[[KalTileView alloc] initWithFrame:r] autorelease]];
             }
         }
@@ -71,9 +68,8 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    CGSize tileSize = [KalGridView tileSize];
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextDrawTiledImage(ctx, (CGRect){CGPointZero,tileSize}, [[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_tile.png"]] CGImage]);
+    CGContextDrawTiledImage(ctx, (CGRect){CGPointZero,kTileSize}, [[UIImage imageWithContentsOfFile:[self getPathToModuleAsset:@"kal_tile.png"]] CGImage]);
 }
 
 - (KalTileView *)firstTileOfMonth
@@ -105,8 +101,7 @@
 
 - (void)sizeToFit
 {
-    CGSize tileSize = [KalGridView  tileSize];
-    self.height = 1.f + tileSize.height * numWeeks;
+    self.height = 1.f + kTileSize.height * numWeeks;
 }
 
 - (void)markTilesForDates:(NSArray *)dates

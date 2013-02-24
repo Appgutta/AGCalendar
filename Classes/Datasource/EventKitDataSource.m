@@ -180,13 +180,12 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 {
     EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
     _event.title = name;
-    /* TODO Fix date */
+    
     _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
     _event.location = location;
     _event.notes = notes;
     _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
     
-    //NSInteger *offset = [[alarm objectForKey:@"offset"];
     EKAlarm *al = [EKAlarm alarmWithRelativeOffset:[[alarm objectForKey:@"offset"] intValue]];
     _event.alarms = [NSArray arrayWithObject:al];
     
