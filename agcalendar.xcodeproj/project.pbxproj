@@ -101,6 +101,8 @@
 
 /* Begin PBXFileReference section */
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		6ABC2B6D16DA195700F93E11 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = app.js; path = example/app.js; sourceTree = "<group>"; };
+		6ABC2B7316DA1BF300F93E11 /* manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = manifest; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* AgCalendar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgCalendar_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE788D1D143D03CE005F61EF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		0867D691FE84028FC02AAC07 /* agcalendar */ = {
 			isa = PBXGroup;
 			children = (
+				6ABC2B7216DA19FE00F93E11 /* examples */,
 				CEEF66FD143CBDE200FD8155 /* assets */,
 				CEEF66A8143CBD9300FD8155 /* Libraries */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -229,10 +232,19 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6ABC2B7316DA1BF300F93E11 /* manifest */,
 				AA747D9E0F9514B9006C5449 /* AgCalendar_Prefix.pch */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		6ABC2B7216DA19FE00F93E11 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				6ABC2B6D16DA195700F93E11 /* app.js */,
+			);
+			name = examples;
 			sourceTree = "<group>";
 		};
 		CEEF66A8143CBD9300FD8155 /* Libraries */ = {
