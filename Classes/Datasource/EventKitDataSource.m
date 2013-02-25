@@ -20,7 +20,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 + (EventKitDataSource *)dataSource
 {
-  return [[[[self class] alloc] init] autorelease];
+  return [[[self class] alloc] init];
 }
 
 - (id)init
@@ -72,7 +72,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil){
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -120,8 +120,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
         time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
         time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
             
-        [time_start release];
-        [time_end release];
     }
     
     return cell;
@@ -181,10 +179,10 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     EKEvent *_event = [EKEvent eventWithEventStore:eventStore];
     _event.title = name;
     
-    _event.startDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate] autorelease];
+    _event.startDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:startDate];
     _event.location = location;
     _event.notes = notes;
-    _event.endDate = [[[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate] autorelease];
+    _event.endDate = [[NSDate alloc] initWithTimeInterval:0 sinceDate:endDate];
     
     EKAlarm *al = [EKAlarm alarmWithRelativeOffset:[[alarm objectForKey:@"offset"] intValue]];
     _event.alarms = [NSArray arrayWithObject:al];
@@ -205,7 +203,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     
     if(isRecurrenceFrequencyExists) {
         
-        EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]] autorelease]];
+        EKRecurrenceEnd *end = [EKRecurrenceEnd recurrenceEndWithEndDate:[[NSDate alloc] initWithTimeInterval:1200 sinceDate:[recurrence objectForKey:@"end"]]];
         
         EKRecurrenceRule *recurrenceRule = [[EKRecurrenceRule alloc]
                                             initRecurrenceWithFrequency:recurrenceFrequency
@@ -213,7 +211,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
                                             end:end];
         
         [_event addRecurrenceRule:recurrenceRule];
-        [recurrenceRule release];
         
     }
     [_event setCalendar:[eventStore defaultCalendarForNewEvents]];
@@ -287,7 +284,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             if (granted) {
                 [self createEvent:name startDate:startDate endDate:endDate location:location notes:notes recurrence:recurrence alarm:alarm];
             } else {
-                UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Calendar" message:@"You didnt allow access to your calendar." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil, nil] autorelease];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Calendar" message:@"You didnt allow access to your calendar." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil, nil];
                 [alert show];
             }
         }];
@@ -309,14 +306,9 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:EKEventStoreChangedNotification object:nil];
-    [items release];
-    [glob release];
-    [events release];
     dispatch_sync(eventStoreQueue, ^{
-        [eventStore release];
     });
     dispatch_release(eventStoreQueue);
-    [super dealloc];
 }
 
 @end

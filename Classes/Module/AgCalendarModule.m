@@ -53,12 +53,6 @@
 
 #pragma mark Cleanup 
 
--(void)dealloc
-{
-	// release any resources that have been retained by the module
-    [dataStore release];
-	[super dealloc];
-}
 
 #pragma mark Internal Memory Management
 
@@ -132,8 +126,6 @@
                       alarm:alarm];
     }
     
-    [dataStore release];
-    [dateFormat release];
 }
 
 -(id)fetchEvents:(id)args
@@ -150,7 +142,6 @@
     
     return [dataStore getEvents:fromDate to:toDate];
     
-    [dataStore release];
 }
 
 -(id)fetchEvent:(id)identifier
@@ -159,7 +150,6 @@
     dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
     return [dataStore getEvent:[identifier objectAtIndex:0]];
     
-    [dataStore release];
 }
 
 -(BOOL)deleteEvent:(id)identifier
@@ -168,7 +158,6 @@
     dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
     return [dataStore deleteEvent:[identifier objectAtIndex:0]];
     
-    [dataStore release];
 }
 
 -(void)deleteAllEvents:(id)event
@@ -181,7 +170,6 @@
         [dataStore deleteAllEvents];
     }
     
-    [dataStore release];
 }
 
 -(id)identifier
