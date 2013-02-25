@@ -153,11 +153,5 @@
     g.viewEditable = editable;
 }
 
--(void)dealloc
-{
-    [calendar release];
-    [dataSource release];
-    [super dealloc];
-}
 
 @end

@@ -520,6 +520,7 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
 				);
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/AgCalendar.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -559,6 +560,7 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
 				);
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/AgCalendar.dst;
 				GCC_MODEL_TUNING = G5;

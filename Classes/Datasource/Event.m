@@ -11,13 +11,13 @@
 
 + (Event*)eventNamed:(NSString *)aName startDate:(NSDate *)aStartDate endDate:(NSDate *)aEndDate location:(NSString *)aLocation attendees:(NSString *)aAttendees note:(NSString *)aNote identifier:(NSString *)aIdentifier type:(NSString *)aType organizer:(NSString *)aOrganizer;
 {
-    return [[[Event alloc] initWithName:aName startDate:aStartDate endDate:aEndDate location:aLocation attendees:aAttendees note:aNote identifier:aIdentifier type:aType organizer:aOrganizer] autorelease];
+    return [[Event alloc] initWithName:aName startDate:aStartDate endDate:aEndDate location:aLocation attendees:aAttendees note:aNote identifier:aIdentifier type:aType organizer:aOrganizer];
 }
 
 - (id)initWithName:(NSString *)aName startDate:(NSDate *)aStartDate endDate:(NSDate *)aEndDate location:(NSString *)aLocation attendees:(NSString *)aAttendees note:(NSString *)aNote identifier:(NSString *)aIdentifier type:(NSString *)aType organizer:(NSString *)aOrganizer
 {
   if ((self = [super init])) {
-      startDate = [aStartDate retain];
+      startDate = aStartDate;
       name = [aName copy];
       attendees = [aAttendees copy];
       location = [aLocation copy];
@@ -39,18 +39,5 @@
     return comparison;
 }
 
-- (void)dealloc
-{
-    [startDate release];
-    [endDate release];
-    [name release];
-    [attendees release];
-    [note release];
-    [identifier release];
-    [location release];
-    [type release];
-    [organizer release];
-    [super dealloc];
-}
 
 @end
