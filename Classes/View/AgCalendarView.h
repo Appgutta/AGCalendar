@@ -23,7 +23,7 @@
 }
 
 
-@property (nonatomic,retain) Globals *g;
+@property (nonatomic,strong) Globals *g;
 
 -(void)showFollowingMonth:(id)args;
 -(void)showPreviousMonth:(id)args;

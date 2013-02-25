@@ -43,13 +43,13 @@
   KalGridView *gridView;
   UITableView *tableView;
   UIImageView *shadowView;
-  id<KalViewDelegate> delegate;
+  id<KalViewDelegate> __unsafe_unretained delegate;
   KalLogic *logic;
 }
 
-@property (nonatomic, assign) id<KalViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id<KalViewDelegate> delegate;
 @property (nonatomic, readonly) UITableView *tableView;
-@property (nonatomic, readonly) KalDate *selectedDate;
+@property (unsafe_unretained, nonatomic, readonly) KalDate *selectedDate;
 
 - (id)initWithFrame:(CGRect)frame delegate:(id<KalViewDelegate>)delegate logic:(KalLogic *)logic;
 - (BOOL)isSliding;

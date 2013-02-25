@@ -20,7 +20,7 @@ static Globals *sharedGlobalDataManager = nil;
 {
     @synchronized(self) {
         if (sharedGlobalDataManager == nil) {
-            [[[self alloc] init] autorelease];
+            [[self alloc] init];
         }
     }
     return sharedGlobalDataManager;
@@ -56,27 +56,6 @@ static Globals *sharedGlobalDataManager = nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone
-{
-    return self;	
-}
-
-
-- (id)retain
-{
-    return self;	
-}
-
-- (oneway void)release
-{
-}
-
-- (unsigned)retainCount
-{
-    return UINT_MAX;
-}
-
-
-- (id)autorelease
 {
     return self;	
 }

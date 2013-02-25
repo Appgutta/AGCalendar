@@ -23,7 +23,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 + (SQLDataSource *)dataSource
 {
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 - (NSString *)dbPath:(NSString*)dataBase
@@ -47,7 +47,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
         
         databasePath = [self dbPath:@"events.db"];
         
-        NSFileManager *filemgr = [[NSFileManager defaultManager] retain];
+        NSFileManager *filemgr = [NSFileManager defaultManager];
         
         if ([filemgr fileExistsAtPath: databasePath ] == NO)
         {
@@ -70,7 +70,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
             }
         }
         
-        [filemgr release];
     }
     return self;
 }
@@ -108,7 +107,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil){
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
@@ -153,8 +152,6 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     time_start.text = [NSString stringWithFormat:@"%02d:%02d", hour_start, minute_start];
     time_end.text = [NSString stringWithFormat:@"%02d:%02d", hour_end, minute_end];
         
-    [time_start release];
-    [time_end release];
     
     /*Event *event = [self eventAtIndexPath:indexPath];
     //cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"flags/%@.gif", event.location]];
@@ -169,7 +166,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (void)loadEventsFrom:(NSDate *)fromDate to:(NSDate *)toDate delegate:(id<KalDataSourceCallbacks>)delegate
 {
-    NSDateFormatter *fmt = [[[NSDateFormatter alloc] init] autorelease];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     
 	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
 		const char *sql = "select title, location, type, identifier, note, date_start, date_end, attendees, organizer from Events where date_start between ? and ?";
@@ -199,7 +196,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 }
 
 -(id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate {
-    NSDateFormatter *fmt = [[[NSDateFormatter alloc] init] autorelease];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     eventList = [[NSMutableArray alloc] init];
     
 	if(sqlite3_open([databasePath UTF8String], &db) == SQLITE_OK) {
@@ -432,12 +429,5 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return matches;
 }
 
-- (void)dealloc 
-{
-    [eventList release];
-    [events release];
-    [items release];
-    [super dealloc];
-}
 
 @end
