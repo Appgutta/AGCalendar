@@ -305,7 +305,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return result;
 }
 
--(void)removeEvent:(NSString *)identifier
+-(BOOL)removeEvent:(NSString *)identifier
 {
     BOOL result = NO;
     if ([self checkEvent:identifier] == YES) {
@@ -336,6 +336,8 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     } else {
         NSLog(@"[INFO] No event found with identifier %@", identifier);
     }
+    
+    return result;
 }
 
 -(BOOL)deleteAllEvents

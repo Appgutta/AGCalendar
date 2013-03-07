@@ -28,6 +28,6 @@
 - (BOOL)deleteAllEvents;
 - (id)getEvents:(NSDate *)fromDate to:(NSDate *)toDate;
 - (id)getEvent:(NSString *)identifier;
-- (void)removeEvent:(NSString *)identifier;
+- (BOOL)removeEvent:(NSString *)identifier;
 
 @end

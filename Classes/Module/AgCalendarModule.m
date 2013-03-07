@@ -156,7 +156,7 @@
 {
     global = [Globals sharedDataManager];
     dataStore = [global.dbSource isEqualToString:@"coredata"] ? [[SQLDataSource alloc] init] : [[EventKitDataSource alloc] init];
-    return [dataStore deleteEvent:[identifier objectAtIndex:0]];
+    return [dataStore removeEvent:[identifier objectAtIndex:0]];
     
 }
 
