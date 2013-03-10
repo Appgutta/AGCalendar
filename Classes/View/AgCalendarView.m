@@ -53,7 +53,8 @@
             eventDetails = [NSDictionary dictionaryWithObjectsAndKeys: 
                                     event.title, @"title", 
                                     event.location, @"location",
-                                    event.startDate, @"startDate", 
+                                    event.startDate, @"startDate",
+                                    event.eventIdentifier, @"identifier",
                                     event.endDate, @"endDate",
                                     event.notes, @"notes",
                                     alarmOffset, @"alarmOffset",
