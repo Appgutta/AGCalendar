@@ -1,3 +1,8 @@
+STATUS
+============
+I receive alot of emails regarding this module and the incompatibility with iOS 7, so I've started fixing the problems.
+Be patient with me :-)
+
 AGCalendar Module <img src="http://f.cl.ly/items/422Q2T3G043h0O171E1z/acgLogo.png" height="35" valign="bottom" />
 ============
 
